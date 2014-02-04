@@ -10,11 +10,11 @@ def index(request):
 	return render_to_response('homepage/index.html', context_instance=RequestContext(request))
 
 
-def works(request):
+def about(request):
 	mision = "misión de la empresa"
 	vision = "visión de la empresa"
 	ctx = {'mision': mision, 'vision': vision}
-	return render_to_response('homepage/trabajos.html', ctx, context_instance=RequestContext(request))
+	return render_to_response('homepage/sobregiselle.html', ctx, context_instance=RequestContext(request))
 
 
 def services(request):
