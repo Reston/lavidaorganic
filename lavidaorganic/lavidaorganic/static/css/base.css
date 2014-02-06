@@ -1,1 +1,127 @@
 @charset 'utf-8';
+body{
+	margin: 0;
+	background: white;
+	color: black;
+}
+
+h1{
+	margin: 0;
+	color: white;
+	font-family: 'Lobster', Helvetica, Arial;
+	line-height: 38px;
+	margin-top: 65px;
+}
+.wrapper{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto 0 auto;
+}
+.circulo{
+	-webkit-border-radius: 400px;
+	-moz-border-radius: 400px;
+	border-radius: 400px;
+	display: inline-block;
+	background: #C8D075;
+	background: rgba(200, 208, 117, 0.7);
+}
+
+/* FOOTER */
+footer{
+	color: #FFF;
+	background: #C8D075;
+	text-align: center;
+}
+.fraseFooter{
+	text-align: center;
+	margin: 0;
+	padding: 25px 0;
+	font-size: 2em;
+}
+.footer-der, .footer-med, .footer-izq{
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-der, .footer-izq{
+	width: 20%;
+}
+.footer-med{
+	width: 59%;
+}
+.footer-izq{
+	margin-top: 20px;
+	vertical-align: bottom;
+}
+.listaMenuFooter{
+	padding: 0;
+	text-align: center;
+	text-shadow: 2px 2px 1px #000;
+}
+.listaMenuFooter li{
+	display: inline-block;
+}
+.listaMenuFooter a{
+	text-decoration: none;
+	color: white;
+	font-size: 1.5em;
+	margin-right: 25px;
+}
+
+footer .copyRight img{
+	width: 60px;
+	vertical-align: middle;
+}
+.redesFooter{
+	background: white;
+	border-top: 5px solid #C8D075;
+}
+
+/* Configuración back to top button */
+
+.back-top {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	z-index: 1;
+}
+
+.back-top a {
+	width: 108px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+.back-top a:hover {
+	color: white;
+}
+
+	/* arrow icon (span tag) */
+.back-top span {
+	width: 70px;
+	height: 70px;
+	display: block;
+	margin: 0 auto 7px auto;
+	font-size: 0;
+	background: #16a085 url(../img/up-arrow.png) no-repeat center center;
+
+	/* rounded corners */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+.back-top a:hover span {
+	background-color: #777;
+}

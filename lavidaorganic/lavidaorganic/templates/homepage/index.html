@@ -2,33 +2,67 @@
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="Página de inicio de la vida organic">
 {% endblock%}
 {% block title %}
 Duranjo Web
 {% endblock%}
 {% block css%}
-<link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+<link rel="stylesheet" href="{% static 'css/homepage/index.css' %}">
 {% endblock %}
 {% block js %}
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/back-top.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
 {% endblock %}
 {% block navi %}
-		<ul>
-			<li class="index"><a href="{% url 'homepageindex' %}">Inicio</a></li>
-			<li class="works"><a href="{% url 'homepageabout' %}">Sobre Giselle</a></li>
-			<li class="services"><a href="{% url 'homepageservices' %}">Servicios</a></li>
-			<li class="contact"><a href="{% url 'homapagecontact' %}">Contacto</a></li>
-		</ul>				
 {% endblock %}
 {% block clear %}{% endblock%}
 {% block contenido %}
 	<section class="bannerPrincipal">
-			<div class="wrapper banner1">
+		<div class="wrapper banner1">
+			<div class="circulo eslogan">
+				<h1>Saludable desde dentro hacia fuera.</h1>
+			</div>
+			<div class="logomenu">
+				<div class="circulo"><img src="{% static 'img/logoinicio.png' %}" alt="Logo de La vida organic"></div>
+			</div>
+			<div class="suscripcion">
+				<form action="#">
+					<label for="Text">
+						Suscribe tu correo eléctronico:
+					</label>
+					<input type="text">
+					<input type="submit">
+				</form>
+			</div>
+			<div class="redesInicio">
+				<ul>
+					<li class="circulo">facebook</li>
+					<li class="circulo">Twitter</li>
+					<li class="circulo">Instagram</li>
+					<li class="circulo">Youtube</li>
+				</ul>
+			</div>
 		</div>
 	</section>
 	<section class="ultimasEntradas">
+		<div class="wrapper">
+			<h2>BLOG <span>Ultimas Entradas</span></h2>
+			<ul class="entradas">
+				<li>
+					<img src="" alt="">
+					<div class="descripcion">
+						<h3>titulo</h3>
+						<p>descripcion corta </p>
+						<a href="#entrada">Leer más</a>
+					</div>
+				</li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<a href="/blog">Ver todas las noticias</a>
+		</div>
 	</section>	
 	<!-- Google+ SCRIPT --> 
 		<!-- Place this tag after the last badge tag. -->

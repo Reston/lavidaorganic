@@ -1,0 +1,37 @@
+@charset 'utf-8';
+h2{
+	margin: 0;
+}
+header{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	background:url(../../img/fondoinicio.jpg) no-repeat center left;
+}
+.headerPosition{
+	margin-top: 90px;
+	margin-bottom: 90px;
+	background: #C8D075;
+	background: rgba(200, 208, 117, 0.7);
+	padding: 5px;
+	text-align: right;
+}
+nav{
+	position: relative;
+}
+nav a{
+	display: inline-block;
+	width: 16%;
+	color: #FFF;
+	font-size: 1.5em;
+	text-shadow: 2px 1px 1px #000;
+	text-decoration: none;
+	text-align: center;
+}
+.logomenu{
+	position: absolute;
+	top: -90px;
+	left: -35px
+}
+.logomenu img{
+	width: 200px;
+}

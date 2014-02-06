@@ -1,14 +1,20 @@
-{% extends 'homepage/index.html' %}
+{% extends 'base.html' %}
+{% load staticfiles %}
 {% block title %}
-Contacto - Duranjo
+Contacto - La vida organica
 {% endblock %}
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/index.css">
-<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/contacto.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/homepage/contact.css' %}">
 {% endblock %}
 {% block js %}
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/propios/selectable.js"></script>
+{% endblock %}
+{% block navi %}
+	<div class="logomenu">
+		<div class="circulo"><img src="{% static 'img/logoinicio.png' %}" alt="Logo de La vida organic"></div>
+	</div>
 {% endblock %}
 {% block contenido %}
 	<section class="fondoContacto">
