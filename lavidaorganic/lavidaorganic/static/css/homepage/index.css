@@ -77,3 +77,47 @@ nav a{
 .ultimasEntradas{
 	background: url(../../img/patron.jpg);
 }
+.ultimasEntradas  ul{
+	padding: 0px;
+}
+.ultimasEntradas  ul li {
+	display: inline-block;
+	width: 48%;
+}
+.ultimasEntradas  ul li img{
+	display: inline-block;
+}
+.ultimasEntradas  ul li .derecha{
+	display: inline-block;
+	width: 46%;
+	vertical-align: top;
+	background-color: #C8D075;
+	height: 200px;
+	margin-left: -4px;
+	color: #FFF;
+	overflow: hidden;
+}
+.tituloNoticia{
+	display: table-cell;
+	text-align: center;
+	font-size: 1.4em;
+	height: 47px;
+	overflow: hidden;
+	vertical-align: middle;
+}
+.ultimasEntradas  ul li a{
+	display: block;
+	width: 55%;
+	padding: 7px;
+	text-align: center;
+	background-color: #FFF;
+	text-decoration: none;
+	color: #C8D075;
+	margin: 0px auto;
+}
+.ultimasEntradas  ul li .resumen{
+	height: 96px;
+	text-align: justify;
+	width: 90%;
+	margin: 0 auto;
+	}

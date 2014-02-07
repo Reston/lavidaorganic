@@ -4,10 +4,18 @@ from django.shortcuts import render_to_response
 from lavidaorganic.apps.homepage.forms import contactForm
 from django.template import RequestContext
 from django.core.mail import send_mail
+from zinnia.models import Entry
+import nltk
 
 
 def index(request):
-	return render_to_response('homepage/index.html', context_instance=RequestContext(request))
+	entradas= Entry.objects.order_by('-creation_date')
+	entradas= entradas[:3]
+	for ent in entradas:
+		quitar_html= nltk.clean_html(ent.content) 
+		ent.content =  quitar_html[:100]
+	ctx = {'entradas':entradas}	
+	return render_to_response('homepage/index.html',ctx, context_instance=RequestContext(request))
 
 
 def about(request):

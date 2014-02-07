@@ -48,19 +48,22 @@ Duranjo Web
 	<section class="ultimasEntradas">
 		<div class="wrapper">
 			<h2>BLOG <span>Ultimas Entradas</span></h2>
-			<ul class="entradas">
-				<li>
-					<img src="" alt="">
-					<div class="descripcion">
-						<h3>titulo</h3>
-						<p>descripcion corta </p>
-						<a href="#entrada">Leer más</a>
-					</div>
-				</li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+				<ul>
+		{% for item in entradas %}
+					<li>
+						<img src="{{ MEDIA_URL }}{{item.image}}" width ="241" height="200" alt="{{ item.title }}">
+						<div class="derecha">
+							<div class="tituloNoticia">{{ item.title }}</div>
+							<div class="resumen">
+								{% autoescape off %}
+								<p>{{item.content}}...</p>
+								{% endautoescape %}
+							</div>
+							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
+						</div>	
+					</li>
+		{% endfor %}
+				</ul>
 			<a href="/blog">Ver todas las noticias</a>
 		</div>
 	</section>	

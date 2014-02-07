@@ -16,7 +16,8 @@ urlpatterns = patterns(
 		url(r'^', include('lavidaorganic.apps.homepage.urls')),
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
+	url(r'^blog/', include('zinnia.urls')),
+	url(r'^comments/', include('django.contrib.comments.urls')),
 	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'^admin/password_reset/$', 'django.contrib.auth.views.password_reset', name='admin_password_reset'),
