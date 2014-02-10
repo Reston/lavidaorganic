@@ -1,12 +1,26 @@
 @charset 'utf-8';
 h2{
 	margin: 0;
+	font-size: 7em;
+	color: #C8D075;
+}
+h2 span{
+	font-size: 0.5em;
+}
+h3{
+	text-align: center;
+}
+h3 a{
+	background: #C8D075;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
 }
 header{
 	margin-top: 50px;
 	background: #C8D075;
 	background: rgba(200, 208, 117, 0.7);
-	padding: 5px;
+	padding: 5px 0;
 	text-align: center;
 	position: absolute;
 	top: 0;
@@ -48,31 +62,67 @@ nav a{
 	top: -300px;
 }
 
-
-
 .bannerPrincipal{
 	background: url(../../img/fondoinicio.jpg) no-repeat center center;
-	height: calc(100%);
-	height: -moz-calc(100%);
-	height: -webkit-calc(100%);
-	min-height: 475px;
+	padding-bottom: 50px;
 }
 .suscripcion{
 	background: #C8D075;
 	background: rgba(200, 208, 117, 0.7);
-	display: block;
+	display: inline-block;
 	width: 250px;
 	height: 100px;
-	border: 2px solid #FFF;
+	border: 6px solid #FFF;
 	border-radius: 5px;
+	text-align: center;
+	padding: 5px;
 }
+.suscripcion form label{
+	display: block;
+	margin-top: 5px;
+}
+.suscripcion form input{
+	display: block;
+	margin: 10px auto 0 auto;
+	background: rgba(0, 0, 0, 0);
+	border: none;
+}
+#inputSuscripcion{
+	border-bottom: 2px solid #FFF;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	color: #FFF;
+}
+
 .redesInicio{
+	position: relative;
+	left: 42%;
+	display: inline-block;
 	text-align: right;
 }
 .redesInicio ul li{
 	display: inline-block;
 }
-
+.icon{
+	width: 70px;
+	height: 70px;
+}
+.facebookIcon, .twitterIcon, .instagramIcon, .youtubeIcon{
+	background: url(../../img/redesiconos.png) no-repeat;
+}
+.facebookIcon{
+	background-position: 11px -124px;
+}
+.twitterIcon{
+	background-position: -183px -124px;
+}
+.instagramIcon{
+	background-position: -119px -124px;
+}
+.youtubeIcon{
+	background-position: -52px -124px;
+}
 /* BLOG ULTIMAS NOTICIAS */
 .ultimasEntradas{
 	background: url(../../img/patron.jpg);
@@ -82,28 +132,28 @@ nav a{
 }
 .ultimasEntradas  ul li {
 	display: inline-block;
-	width: 48%;
+	width: 49%;
 }
 .ultimasEntradas  ul li img{
 	display: inline-block;
+	width: 270px;
+	height: 250px;
 }
 .ultimasEntradas  ul li .derecha{
 	display: inline-block;
-	width: 46%;
+	width: 42%;
 	vertical-align: top;
 	background-color: #C8D075;
-	height: 200px;
+	height: 250px;
 	margin-left: -4px;
 	color: #FFF;
 	overflow: hidden;
 }
 .tituloNoticia{
-	display: table-cell;
+	display: block;
 	text-align: center;
 	font-size: 1.4em;
-	height: 47px;
-	overflow: hidden;
-	vertical-align: middle;
+	padding-top: 16px; 
 }
 .ultimasEntradas  ul li a{
 	display: block;
@@ -116,8 +166,7 @@ nav a{
 	margin: 0px auto;
 }
 .ultimasEntradas  ul li .resumen{
-	height: 96px;
 	text-align: justify;
 	width: 90%;
 	margin: 0 auto;
-	}
+}

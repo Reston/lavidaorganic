@@ -1,6 +1,11 @@
 @charset 'utf-8';
 h2{
 	margin: 0;
+	font-size: 7em;
+	color: #C8D075;
+}
+h3{
+	margin: 0;
 }
 header{
 	padding-top: 1px;
@@ -34,4 +39,83 @@ nav a{
 }
 .logomenu img{
 	width: 200px;
+}
+/********SECCION CONTACTO********/
+.fondoContacto{
+	background: url(../../img/patron.jpg);
+	position: relative;
+	height: 940px;
+}
+.campo label {
+float: left;
+width: 350px;
+margin-bottom: 3px;
+}
+
+.campo input {
+	text-indent: 5px;
+	height: 33px;
+	width: 100%;
+	border: none;
+	border-radius: 15px;
+}
+textarea{
+	text-indent: 5px;
+	width: 100%;
+	border: none;
+	border-radius: 15px;
+}
+.botonEnviar input[type=submit]{
+	margin-left: 40%;
+	margin-top: 1%;
+}
+.formCircle{
+	color: #FFF;
+	width: 345px;
+	height: 440px;
+	margin: 0;
+	position: relative;
+	left: 390px;
+	background: url(../../img/contactCircle.png) top left no-repeat;
+	line-height: 24px;
+	padding: 75px 110px;
+	z-index: 15;
+}
+
+.infoContacto{
+	padding: 49px;
+	background: url(../../img/infoContactCircle.png) center no-repeat;
+	width: 335px;
+	height: 335px;
+	position: relative;
+	top: -196px;
+	left: 155px;
+	z-index: 10;
+}
+
+.infoContacto .wrapperInfo{
+	padding: 55px;
+	line-height: 2em;
+	color: #FFF;
+	font-size: 1.1em;
+}
+
+.contactSkype{
+	display: inline-block;
+	font-size: 2em;
+	position: absolute;
+	top: 510px;
+	z-index: 11;
+}
+.contactSkype a{
+	text-decoration: none;
+	color: #C8D075;
+}
+
+.mujer{
+	position: absolute;
+	top: 150px;
+}
+.mujer img{
+	width: 400px;
 }

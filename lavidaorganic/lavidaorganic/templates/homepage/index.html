@@ -31,24 +31,64 @@ Duranjo Web
 					<label for="Text">
 						Suscribe tu correo eléctronico:
 					</label>
-					<input type="text">
+					<input type="text" id="inputSuscripcion">
 					<input type="submit">
 				</form>
 			</div>
 			<div class="redesInicio">
 				<ul>
-					<li class="circulo">facebook</li>
-					<li class="circulo">Twitter</li>
-					<li class="circulo">Instagram</li>
-					<li class="circulo">Youtube</li>
+					<li class="circulo"><a href="https://www.facebook.com/lavidaorganic" class="icon circulo facebookIcon"></a></li>
+					<li class="circulo"><a href="https://www.twitter.com/lavidaorganica" class="icon circulo twitterIcon"></a></li>
+					<li class="circulo"><a href="http://instagram.com/lavidaorganica" class="icon circulo instagramIcon"></a></li>
+					<li class="circulo"><a href="http://www.youtube.com/lavidaorganica" class="icon circulo youtubeIcon"></a></li>
 				</ul>
 			</div>
 		</div>
 	</section>
 	<section class="ultimasEntradas">
 		<div class="wrapper">
-			<h2>BLOG <span>Ultimas Entradas</span></h2>
-				<ul>
+			<h2>BLOG <span>Últimas Entradas</span></h2>
+				<ul class="listaNoticias">
+					<li class="noticia">
+						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
+						<div class="derecha">
+							<div class="tituloNoticia">Lorem ipsum testo</div>
+							<div class="resumen">
+								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. justo. Nullam dictum felis eu pede mollis pretium.</p>
+							</div>
+							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
+						</div>
+					</li>
+					<li class="noticia">
+						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
+						<div class="derecha">
+							<div class="tituloNoticia">Lorem ipsum testo</div>
+							<div class="resumen">
+								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+							</div>
+							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
+						</div>	
+					</li>
+					<li class="noticia">
+						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
+						<div class="derecha">
+							<div class="tituloNoticia">Lorem ipsum testo</div>
+							<div class="resumen">
+								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+							</div>
+							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
+						</div>	
+					</li>
+					<li class="noticia">
+						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
+						<div class="derecha">
+							<div class="tituloNoticia">Lorem ipsum testo</div>
+							<div class="resumen">
+								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+							</div>
+							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
+						</div>	
+					</li>
 		{% for item in entradas %}
 					<li>
 						<img src="{{ MEDIA_URL }}{{item.image}}" width ="241" height="200" alt="{{ item.title }}">
@@ -62,9 +102,10 @@ Duranjo Web
 							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
 						</div>	
 					</li>
+
 		{% endfor %}
 				</ul>
-			<a href="/blog">Ver todas las noticias</a>
+			<h3><a href="/blog">Ver todas las noticias</a></h3>
 		</div>
 	</section>	
 	<!-- Google+ SCRIPT --> 

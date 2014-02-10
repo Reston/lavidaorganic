@@ -23,7 +23,7 @@ h1{
 	border-radius: 400px;
 	display: inline-block;
 	background: #C8D075;
-	background: rgba(200, 208, 117, 0.7);
+	background: rgba(200, 208, 117, 0.5);
 }
 
 /* FOOTER */
@@ -32,11 +32,39 @@ footer{
 	background: #C8D075;
 	text-align: center;
 }
-.fraseFooter{
-	text-align: center;
-	margin: 0;
-	padding: 25px 0;
-	font-size: 2em;
+.circuloFooter{
+	-webkit-border-radius: 400px;
+	-moz-border-radius: 400px;
+	border-radius: 400px;
+	display: inline-block;
+	background: #C8D075;
+}
+.redesFooter{
+	background: url(../img/greyzz_@2X.png);
+	border-top: 5px solid #C8D075;
+}
+.iconFooter{
+	width: 150px;
+	height: 150px;
+}
+.facebookIconFooter, .twitterIconFooter, .instagramIconFooter, .youtubeIconFooter{
+	background: url(../img/redesiconos.png) no-repeat;
+}
+.facebookIconFooter{
+	background-position: 45px 16px;
+}
+.twitterIconFooter{
+	background-position: -347px 16px;
+}
+.instagramIconFooter{
+	background-position: -220px 16px;
+}
+.youtubeIconFooter{
+	background-position: -80px 16px;
+}
+
+.logo img{
+	width: 200px;
 }
 .footer-der, .footer-med, .footer-izq{
 	display: inline-block;
@@ -46,7 +74,7 @@ footer{
 	width: 20%;
 }
 .footer-med{
-	width: 59%;
+	width: 70%;
 }
 .footer-izq{
 	margin-top: 20px;
@@ -66,14 +94,31 @@ footer{
 	font-size: 1.5em;
 	margin-right: 25px;
 }
+.contactNumber{
+	display: inline-block;
+	font-size: 2em;
+}
+.contactNumber a{
+	text-decoration: none;
+	color: white;
+}
+.flagUsa{
+	display: inline-block;
+	background: url(../img/usaicon.png) no-repeat 0 -7px;
+	width: 45px;
+	height: 33px;
+	vertical-align: top;
+	-webkit-border-radius: 400px;
+	-moz-border-radius: 400px;
+	border-radius: 400px;
+}
+.flagSkype img{
+	vertical-align: bottom;
+}
 
 footer .copyRight img{
 	width: 60px;
 	vertical-align: middle;
-}
-.redesFooter{
-	background: white;
-	border-top: 5px solid #C8D075;
 }
 
 /* Configuración back to top button */
