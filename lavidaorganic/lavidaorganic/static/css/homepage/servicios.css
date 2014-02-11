@@ -1,6 +1,20 @@
 @charset 'utf-8';
 h2{
 	margin: 0;
+	color: white;
+	font-size: 3em;
+	text-align: center;
+}
+h3{
+	color: #C8D075;
+	text-align: center;
+}
+h4{
+	margin: 0;
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	margin-top: 1em;
 }
 header{
 	padding-top: 1px;
@@ -34,4 +48,57 @@ nav a{
 }
 .logomenu img{
 	width: 200px;
+}
+/* SERVICIOS DISPONIBLES */
+.serviciosDisponibles{
+	background: #C1CA61;
+}
+.primero, .segundo{
+	background: url(../../img/greyzz_@2X.png);
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 1%;
+	padding: 16px;
+	border-radius: 5px;
+	text-align: center;
+}
+.primero li, .segundo li{
+	text-align: left;
+}
+.primero a{
+	background: #C8D075;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+}
+.separadorServicio{
+	display: block;
+	margin: 0 auto;
+	width: 20%;
+	text-align: center;
+	font-weight: bold;
+}
+.instrucciones{
+	color: white;
+	font-weight: bold;
+}
+.instrucciones > div{
+	font-size: 2em;
+}
+.listaInstrucciones li{
+	display: inline-block;
+	width: 30%;
+	margin-left: 20px;
+}
+.listaInstrucciones li span{
+	display: inline-block;
+	vertical-align: top;
+	width: 51%;
+}
+.bigNumber{
+	display: inline-block;
+	font-size: 6em;
+	line-height: 0.5em;
+	vertical-align: top;
 }

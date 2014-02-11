@@ -17,8 +17,74 @@ Servicios de la vida organica
 {% endblock %}
 {% block contenido %}
 <section class="quienessomos">
-	<div class="wrapper">
 		<div class="tituloStyle"><h2>libre</h2></div>
-	</div>
+		<section class="serviciosDisponibles">
+			<div class="wrapper">
+				<h2>Servicios Disponibles</h2>
+				<div class="servicios">
+					<div class="primero">
+						<h3>Una Consulta Personalizada</h3>
+						<p>Si usted es de los que le dan una lista y sabe seguirla paso a paso SIN una asesora de diario, pues esto es lo que necesita.</p>
+						<div class="separadorServicio">Incluye</div>
+						<p>
+							<ul>
+								<li>1 Consulta por Skype de 50 minutos</li>
+								<li>Estudio y explicación de su Historial de Salud (La Clave)</li>
+								<li>Recomendaciones y Tips para llegar a el objetivo deseado</li>
+								<li>Lista de alimentos ideales para su estilo de vida y cuerpo</li>
+							</ul>
+						</p>
+						<div class="separadorServicio">Venezuela</div>
+						<p>Costo: 1.800 Bs. por Mes</p>
+						<p>Metodo de pago: Transferencia Bancaria</p>
+						<p><a href="#solicitarDatosBancarios">Solicitar datos Bancarios</a></p>
+						<div class="separadorServicio">U.S.A.</div>
+						<p>Costo: $149 por mes</p>
+						<p>Metodo de pago: PayPal</p>
+						<!-- BOTON PAYPAL AQUÍ-->
+						[BOTON PAYPAL]
+						<!-- BOTON PAYPAL AQUÍ-->
+					</div>
+					<div class="segundo">
+						<h3>Asesoria Completa Personalizada</h3>
+						<p>¡Estoy aquí a cada paso de la manera de entrenar, guíar, motivar, y llegar a lograr su meta!</p>
+						<p>Duración: 1 Mes</p>
+						<div class="separadorServicio">Incluye</div>
+						<p>
+							<ul>
+								<li>Consulta por Skype de 45 minutos cada 2 semanas</li>
+								<li>Estudio y explicación de su Historial de Salud (La Clave)</li>
+								<li>Recomendaciones y Tips para llegar a el objetivo deseado</li>
+								<li>Lista de alimentos ideales para su estilo de vida y cuerpo</li>
+								<li>Disponibilidad por medio de e-mail diariamente</li>
+								<li>Lograras tu meta bajo mi supervisión</li>
+								<li>¡Mucha Salud!</li>
+							</ul>
+						</p>
+						<div class="separadorServicio">U.S.A.</div>
+						<p>Costo: $199 por mes</p>
+						<p>Metodo de pago: PayPal</p>
+						<!-- BOTON PAYPAL AQUÍ-->
+						[BOTON PAYPAL]
+						<!-- BOTON PAYPAL AQUÍ-->
+					</div>
+				</div>
+				<div class="instrucciones">
+					<h4>Instrucciones</h4>
+					<div>Pasos:</div>
+					<ul class="listaInstrucciones">
+						<li>
+							<div class="bigNumber">1</div><span>Pagar Consulta</span><img src="{% static 'img/dinero.png' %}" alt="icono dinero">
+						</li>
+						<li>
+							<div class="bigNumber">2</div><span>Llenar y Enviar Historial de Salud</span><img src="{% static 'img/papelito.png' %}" alt="icono historial medico">
+						</li>
+						<li>
+							<div class="bigNumber">3</div><span>Reciba las fechas disponibles para su consulta</span><img src="{% static 'img/listo.png' %}" alt="icono aprobado">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 </section>
 {% endblock%}
