@@ -6,4 +6,5 @@ urlpatterns = patterns(
 	url(r'^sobregiselle/$', 'about', name="homepageabout"),
 	url(r'^servicios/$', 'services', name="homepageservices"),
 	url(r'^contacto/$', 'contact', name="homapagecontact"),
+	url(r'^historia-de-salud/$', 'historia', name="secrethistoria"),
 )

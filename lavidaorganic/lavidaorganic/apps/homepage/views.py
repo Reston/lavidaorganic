@@ -1,10 +1,13 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
+from lavidaorganic import settings
 from lavidaorganic.apps.homepage.forms import contactForm
 from django.template import RequestContext
 from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_exempt
 from zinnia.models import Entry
+
 import nltk
 
 
@@ -26,10 +29,12 @@ def about(request):
 
 
 def services(request):
-	serv = "El arte de servir"
-	ctx = {'serv': serv}
-	return render_to_response('homepage/servicios.html', ctx, context_instance=RequestContext(request))
+	context = {'paypal_url': settings.PAYPAL_URL, 'paypal_email': settings.PAYPAL_EMAIL, 'paypal_return_url': settings.PAYPAL_RETURN_URL}
+	return render_to_response('homepage/servicios.html', context, context_instance=RequestContext(request))
 
+@csrf_exempt
+def historia(request):
+	return render_to_response('homepage/historia.html', context_instance=RequestContext(request))
 
 def contact(request):
 	success = False

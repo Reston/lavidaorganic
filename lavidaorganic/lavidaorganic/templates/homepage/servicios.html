@@ -8,7 +8,7 @@ Servicios de la vida organica
 <link rel="stylesheet" type="text/css" href="{% static 'css/homepage/servicios.css' %}">
 {% endblock %}
 {% block js %}
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 {% endblock %}
 {% block navi %}
 	<div class="logomenu">
@@ -60,7 +60,17 @@ Servicios de la vida organica
 						<p>Costo: $149</p>
 						<p>Metodo de pago: PayPal</p>
 						<!-- BOTON PAYPAL AQUÍ-->
-						[BOTON PAYPAL]
+						<form action="{{ paypal_url }}" method="post">
+						  <input type="hidden" name="amount" value="149.00">
+						  <input type="hidden" name="cmd" value="_xclick">
+						  <input type="hidden" name="business" value="{{ paypal_email }}">
+						  <input type="hidden" name="item_name" value="Contulta Personalizada">
+						  <input type="hidden" name="currency_code" value="USD">
+						  <input type="hidden" name="return" value="{{ paypal_return_url }}/historia-de-salud/">
+						  <input type="hidden" name="cancel_return" value="{{ paypal_return_url }}/">
+						  <input type='hidden' name='rm' value='2'>
+						  <input type="image" src="http://www.paypal.com/en_AU/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+						</form>
 						<!-- BOTON PAYPAL AQUÍ-->
 					</div>
 					<div class="segundo">
@@ -84,7 +94,17 @@ Servicios de la vida organica
 						<p>Costo: $199 por mes</p>
 						<p>Metodo de pago: PayPal</p>
 						<!-- BOTON PAYPAL AQUÍ-->
-						[BOTON PAYPAL]
+						<form action="{{ paypal_url }}" method="post">
+						  <input type="hidden" name="amount" value="199.00">
+						  <input type="hidden" name="cmd" value="_xclick">
+						  <input type="hidden" name="business" value="{{ paypal_email }}">
+						  <input type="hidden" name="item_name" value="Asesoria Completa Personalizada">
+						  <input type="hidden" name="currency_code" value="USD">
+						  <input type="hidden" name="return" value="{{ paypal_return_url }}/historia-de-salud/">
+						  <input type="hidden" name="cancel_return" value="{{ paypal_return_url }}/">
+						  <input type='hidden' name='rm' value='2'>
+						  <input type="image" src="http://www.paypal.com/en_AU/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+						</form>
 						<!-- BOTON PAYPAL AQUÍ-->
 					</div>
 				</div>

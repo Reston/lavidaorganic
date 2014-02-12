@@ -180,3 +180,19 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = '*@gmail.com'
 EMAIL_HOST_PASSWORD = '*'
 EMAIL_POST = 587
+
+#Paypal settings
+# TODO - THESE MUST BE SET
+PAYPAL_PDT_TOKEN = '*** PAYPAY PDT TOKEN ***'
+PAYPAL_EMAIL = 'lavidaorganic@lavidaorganic.com'
+PAYPAL_RETURN_URL = 'http://127.0.0.1:8000'
+
+#### sandbox
+PAYPAL_URL = 'https://www.sandbox.paypal.com/au/cgi-bin/webscr'
+PAYPAL_PDT_URL = 'https://www.sandbox.paypal.com/au/cgi-bin/webscr'
+
+#### live
+#PAYPAL_URL = 'https://www.paypal.com/au/cgi-bin/webscr'
+#PAYPAL_PDT_URL = 'https://www.paypal.com/au/cgi-bin/webscr'
+
+

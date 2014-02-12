@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+Historia de salud - La vida organica
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/homepage/contact.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{% endblock %}
+{% block navi %}
+	<div class="logomenu">
+		<div class="circulo"><img src="{% static 'img/logoinicio.png' %}" alt="Logo de La vida organic"></div>
+	</div>
+{% endblock %}
+{% block contenido %}
+	<section class="fondoHistoria">
+		<h1>HISTORIA DE COSAS LLENAR!!</h1>
+	</section>
+{% endblock%}
