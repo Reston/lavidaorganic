@@ -14,6 +14,7 @@ urlpatterns = patterns(
 	# url(r'^$', 'basicoDuranjo.views.home', name='home'),
 	# url(r'^basicoDuranjo/', include('basicoDuranjo.foo.urls')),
 	url(r'^', include('lavidaorganic.apps.homepage.urls')),
+	(r'^paypalito-manager/', include('paypal.standard.ipn.urls')),
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 	url(r'^blog/', include('zinnia.urls')),

@@ -57,20 +57,10 @@ Servicios de la vida organica
 						<p>Metodo de pago: Transferencia Bancaria</p>
 						<p><a href="#solicitarDatosBancarios">Solicitar datos Bancarios</a></p>
 						<div class="separadorServicio">U.S.A.</div>
-						<p>Costo: $149</p>
+						<p>Costo: $149.99</p>
 						<p>Metodo de pago: PayPal</p>
 						<!-- BOTON PAYPAL AQUÍ-->
-						<form action="{{ paypal_url }}" method="post">
-						  <input type="hidden" name="amount" value="149.00">
-						  <input type="hidden" name="cmd" value="_xclick">
-						  <input type="hidden" name="business" value="{{ paypal_email }}">
-						  <input type="hidden" name="item_name" value="Contulta Personalizada">
-						  <input type="hidden" name="currency_code" value="USD">
-						  <input type="hidden" name="return" value="{{ paypal_return_url }}/historia-de-salud/">
-						  <input type="hidden" name="cancel_return" value="{{ paypal_return_url }}/">
-						  <input type='hidden' name='rm' value='2'>
-						  <input type="image" src="http://www.paypal.com/en_AU/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-						</form>
+						{{form_consulta.sandbox}}
 						<!-- BOTON PAYPAL AQUÍ-->
 					</div>
 					<div class="segundo">
@@ -91,20 +81,10 @@ Servicios de la vida organica
 							</ul>
 						</p>
 						<div class="separadorServicio">U.S.A.</div>
-						<p>Costo: $199 por mes</p>
+						<p>Costo: $199.99 por mes</p>
 						<p>Metodo de pago: PayPal</p>
 						<!-- BOTON PAYPAL AQUÍ-->
-						<form action="{{ paypal_url }}" method="post">
-						  <input type="hidden" name="amount" value="199.00">
-						  <input type="hidden" name="cmd" value="_xclick">
-						  <input type="hidden" name="business" value="{{ paypal_email }}">
-						  <input type="hidden" name="item_name" value="Asesoria Completa Personalizada">
-						  <input type="hidden" name="currency_code" value="USD">
-						  <input type="hidden" name="return" value="{{ paypal_return_url }}/historia-de-salud/">
-						  <input type="hidden" name="cancel_return" value="{{ paypal_return_url }}/">
-						  <input type='hidden' name='rm' value='2'>
-						  <input type="image" src="http://www.paypal.com/en_AU/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-						</form>
+						{{form_asesoria.sandbox}}
 						<!-- BOTON PAYPAL AQUÍ-->
 					</div>
 				</div>

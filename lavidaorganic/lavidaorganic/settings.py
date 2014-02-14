@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'lavidaorganic.apps.homepage',
+    'paypal.standard.ipn',
     'tagging',
     'mptt',
     'zinnia',
@@ -182,14 +183,17 @@ EMAIL_HOST_PASSWORD = '*'
 EMAIL_POST = 587
 
 #Paypal settings
+PAYPAL_RECEIVER_EMAIL = "lavidaorganic@lavidaorganic.com"
+
+
 # TODO - THESE MUST BE SET
-PAYPAL_PDT_TOKEN = '*** PAYPAY PDT TOKEN ***'
-PAYPAL_EMAIL = 'lavidaorganic@lavidaorganic.com'
-PAYPAL_RETURN_URL = 'http://127.0.0.1:8000'
+#PAYPAL_PDT_TOKEN = '*** PAYPAY PDT TOKEN ***'
+#PAYPAL_EMAIL = 'lavidaorganic@lavidaorganic.com'
+#PAYPAL_RETURN_URL = 'http://127.0.0.1:8000'
 
 #### sandbox
-PAYPAL_URL = 'https://www.sandbox.paypal.com/au/cgi-bin/webscr'
-PAYPAL_PDT_URL = 'https://www.sandbox.paypal.com/au/cgi-bin/webscr'
+#PAYPAL_URL = 'https://www.sandbox.paypal.com/au/cgi-bin/webscr'
+#PAYPAL_PDT_URL = 'https://www.sandbox.paypal.com/au/cgi-bin/webscr'
 
 #### live
 #PAYPAL_URL = 'https://www.paypal.com/au/cgi-bin/webscr'
