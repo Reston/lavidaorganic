@@ -8,17 +8,19 @@ from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 from paypal.standard.forms import PayPalPaymentsForm
 from zinnia.models import Entry
-
+from lavidaorganic.apps.talleres.models import Taller
 import nltk
 
 
 def index(request):
 	entradas= Entry.objects.order_by('-creation_date')
 	entradas= entradas[:3]
+	talleres = Taller.objects.order_by('-fecha')
+	talleres= talleres[:3]
 	for ent in entradas:
 		quitar_html= nltk.clean_html(ent.content) 
 		ent.content =  quitar_html[:100]
-	ctx = {'entradas':entradas}	
+	ctx = {'entradas':entradas, 'talleres':talleres}	
 	return render_to_response('homepage/index.html',ctx, context_instance=RequestContext(request))
 
 
@@ -75,3 +77,4 @@ def contact(request):
 		form = contactForm()
 	ctx = {'form': form, 'success': success}
 	return render_to_response('homepage/contacto.html', ctx, context_instance=RequestContext(request))
+

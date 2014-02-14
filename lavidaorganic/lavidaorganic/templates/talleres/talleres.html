@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="Talleres la vida organica">
+{% endblock%}
+{% block title %}
+Talleres La vida orgánica.
+{% endblock%}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/talleres/talleres.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/propios/selectable.js"></script>
+{% endblock %}
+{% block navi %}
+	<div class="logomenu">
+		<div class="circulo"><img src="{% static 'img/logoinicio.png' %}" alt="Logo de La vida organic"></div>
+	</div>
+{% endblock %}
+{% block contenido %}
+<section class="listatalleres">
+	<div class="wrapper">
+		<div class="tituloStyle"><h2>Talleres</h2></div>
+					{% for taller in talleres %}
+				<a href="{{ taller.get_absolute_url }}">
+				<div class="productoContainer">
+				<div class="productoTitulo">{{ taller.titulo }}</div>
+				<div class="productoDescripcion">
+				{{ taller.descripcion_corta }}
+				</div>
+				</div>
+			</a>	
+			{% endfor %}
+	</div>
+</section>
+{% endblock %}

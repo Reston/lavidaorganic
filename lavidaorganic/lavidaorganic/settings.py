@@ -135,9 +135,12 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'lavidaorganic.apps.homepage',
     'paypal.standard.ipn',
+    'lavidaorganic.apps.talleres',
     'tagging',
     'mptt',
     'zinnia',
+    'tinymce',
+
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
   'django.contrib.auth.context_processors.auth',

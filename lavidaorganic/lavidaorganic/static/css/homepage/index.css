@@ -122,6 +122,120 @@ nav a{
 .youtubeIcon{
 	background-position: -52px -124px;
 }
+/* TALLERES */
+.talleres{
+	background: url(../../img/patron.jpg);
+	}
+.talleres ul{
+	text-decoration: none;
+	padding: 0;
+}
+.talleres ul li{
+	box-shadow:  1px 1px 1px 2px #D1D9D2;
+	-webkit-box-shadow:  1px 1px 1px 2px #D1D9D2;
+	-moz-box-shadow:  1px 1px 1px 2px #D1D9D2;
+	display: inline-block;
+	width: 31%;
+	margin-left: 2%;
+	vertical-align: top;
+	height: 304px;
+	margin-bottom: 13px;
+}
+.talleres ul .taller{
+	background-color: #FFF;
+}
+.talleres ul .webinar{
+	background-color: #C8D075;
+}
+.talleres .fecha{
+	display: inline-block;
+	width: 38%;
+	height: 110px;
+	vertical-align: top;
+	border-radius: 0% 0% 78% 0%;
+}
+.talleres .fecha .mes{
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.talleres .fecha .dia{	
+	text-align: center;
+	font-weight: bold;
+	font-size: 3.7em;
+	margin-left: -11px;
+	margin-top: -8px;
+}
+.webinar .fecha, .webinar .botontaller{
+	background-color: #FFF;
+	color: #C8D075;	
+}
+.taller .fecha, .taller .botontaller{
+	background-color: #C8D075;
+	color: #FFF;
+}
+.talleres a{
+	text-decoration: none;
+}
+
+.talleres .titulos{
+	display: inline-block;
+	width: 60%;
+	margin-bottom: 14px;
+	height: 95px;
+	overflow: hidden;
+}
+.webinar .titulos{
+	color: #FFF;
+}
+.taller .titulos{
+	color: #C8D075;
+}
+.talleres .titulos .tipo{
+	text-align: right;
+	font-size: 2em;
+	font-weight: bold;
+	text-decoration: none;
+}
+.talleres .titulos .titulo{ 
+	font-weight: bold;
+	overflow: hidden;
+	text-align: right;
+	}
+.talleres .descripcioncorta{
+	text-align: justify;
+	color: #000;
+	height: 94px;
+	margin-top: 4px;
+	padding: 0px 15px;
+	overflow: hidden;
+	margin-bottom: 5px;
+
+}
+.webinar .descripcioncorta{
+	height: 136px;
+}
+.lugar{
+	padding: 0 20px;
+	text-align: center;
+	color: #000;
+	height: 38px;
+	overflow: hidden;
+
+}
+.horataller{
+	text-align: right;
+}
+.botontaller{
+	display: block;
+	width: 55%;
+	padding: 7px;
+	text-align: center;
+	text-decoration: none;
+	margin: 0px auto;
+	margin-top: 5px;
+}
+
 /* BLOG ULTIMAS NOTICIAS */
 .ultimasEntradas{
 	background: url(../../img/patron.jpg);
