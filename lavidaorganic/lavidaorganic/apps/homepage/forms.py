@@ -1,7 +1,7 @@
 #!/usr/local/bin/python
 # -*- encoding: utf-8 -*-
 from django import forms
-
+from .models import CorreoBoletin
 
 class contactForm(forms.Form):
 	nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre'}))
@@ -22,3 +22,10 @@ class contactForm(forms.Form):
 		if len(texto) < 4:
 			raise forms.ValidationError("*")
 		return texto
+
+class boletinForm(forms.ModelForm):
+	correo = forms.EmailField(widget=forms.TextInput())
+
+	class Meta:
+		model = CorreoBoletin
+		fields = ['correo']

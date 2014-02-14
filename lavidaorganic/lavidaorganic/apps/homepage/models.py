@@ -1,3 +1,4 @@
+from django.db import models
 from django.dispatch import receiver
 from paypal.standard.ipn.signals import payment_was_successful, payment_was_flagged
 
@@ -24,3 +25,8 @@ def payment_flagged(sender, **kwargs):
     print "FLAGGED: %s" % sender.payer_email
 
 print "signals fueron importadas"
+
+
+class CorreoBoletin(models.Model):
+	""""Lista de correos ingresados por los clientes en la pagina de inicio para el boletin"""
+	correo = models.EmailField(max_length=50)

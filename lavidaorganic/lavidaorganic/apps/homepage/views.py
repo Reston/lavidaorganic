@@ -1,8 +1,8 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
-from lavidaorganic import settings
-from lavidaorganic.apps.homepage.forms import contactForm
+#from lavidaorganic import settings
+from lavidaorganic.apps.homepage.forms import contactForm, boletinForm
 from django.template import RequestContext
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
@@ -13,6 +13,14 @@ import nltk
 
 
 def index(request):
+	newsletter = True
+	if request.method == 'POST':
+		form = boletinForm(request.POST)
+		if form.is_valid():
+			form.save()
+			newsletter = False
+	else:
+		form = boletinForm()
 	entradas= Entry.objects.order_by('-creation_date')
 	entradas= entradas[:3]
 	talleres = Taller.objects.order_by('-fecha')
@@ -20,7 +28,7 @@ def index(request):
 	for ent in entradas:
 		quitar_html= nltk.clean_html(ent.content) 
 		ent.content =  quitar_html[:100]
-	ctx = {'entradas':entradas, 'talleres':talleres}	
+	ctx = {'entradas':entradas, 'talleres':talleres, 'form':form, 'newsletter':newsletter}	
 	return render_to_response('homepage/index.html',ctx, context_instance=RequestContext(request))
 
 

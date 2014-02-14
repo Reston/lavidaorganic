@@ -27,11 +27,18 @@ La vida organica - Inicio
 				<div class="circulo"><img src="{% static 'img/logoinicio.png' %}" alt="Logo de La vida organic"></div>
 			</div>
 			<div class="suscripcion">
-				<form action="#">
-					<label for="Text">
-						Suscribe tu correo eléctronico:
-					</label>
-					<input type="text" id="inputSuscripcion">
+				<form method="POST" action="#">{% csrf_token %}
+					{% if newsletter %}
+					<div class="correo">
+						{{ form.subject.errors }}
+						<label for="id_email">Suscribe tu correo eléctronico:</label>
+						{{ form.correo }}
+					</div>
+					{% else %}
+					<div class="correo">
+						¡BIENVENIDO!
+					</div>
+					{% endif %}
 					<input type="submit">
 				</form>
 			</div>
