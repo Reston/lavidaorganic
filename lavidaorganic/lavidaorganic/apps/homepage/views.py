@@ -10,6 +10,7 @@ from paypal.standard.forms import PayPalPaymentsForm
 from zinnia.models import Entry
 from lavidaorganic.apps.talleres.models import Taller
 import nltk
+import datetime
 
 
 def index(request):
@@ -23,12 +24,13 @@ def index(request):
 		form = boletinForm()
 	entradas= Entry.objects.order_by('-creation_date')
 	entradas= entradas[:3]
-	talleres = Taller.objects.order_by('-fecha')
+	talleres =  Taller.objects.filter(fecha__gte=datetime.date.today()).order_by('fecha')
+	numero_talleres = talleres.count()
 	talleres= talleres[:3]
 	for ent in entradas:
 		quitar_html= nltk.clean_html(ent.content) 
 		ent.content =  quitar_html[:100]
-	ctx = {'entradas':entradas, 'talleres':talleres, 'form':form, 'newsletter':newsletter}	
+	ctx = {'entradas':entradas, 'talleres':talleres, 'form':form, 'newsletter':newsletter,'numero':numero_talleres}	
 	return render_to_response('homepage/index.html',ctx, context_instance=RequestContext(request))
 
 

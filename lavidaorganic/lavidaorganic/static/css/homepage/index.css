@@ -235,7 +235,20 @@ nav a{
 	margin: 0px auto;
 	margin-top: 5px;
 }
-
+.vertodo{
+	display: block;
+	width: 96.7%;
+	margin-left: 18px;
+	color: #C8D075;
+	padding: 6px;
+	height: 26px;
+	box-shadow: 1px 1px 1px 2px #D1D9D2;
+	-webkit-box-shadow: 1px 1px 1px 2px #D1D9D2;
+	-moz-box-shadow: 1px 1px 1px 2px #D1D9D2;
+	background-color: #FFF;
+	text-align: center;
+	margin-bottom: 33px;
+}
 /* BLOG ULTIMAS NOTICIAS */
 .ultimasEntradas{
 	background: url(../../img/patron.jpg);

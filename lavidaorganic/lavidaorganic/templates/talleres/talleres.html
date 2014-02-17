@@ -21,19 +21,40 @@ Talleres La vida orgánica.
 	</div>
 {% endblock %}
 {% block contenido %}
-<section class="listatalleres">
+<section class="talleres">
 	<div class="wrapper">
 		<div class="tituloStyle"><h2>Talleres</h2></div>
-					{% for taller in talleres %}
-				<a href="{{ taller.get_absolute_url }}">
-				<div class="productoContainer">
-				<div class="productoTitulo">{{ taller.titulo }}</div>
-				<div class="productoDescripcion">
-				{{ taller.descripcion_corta }}
-				</div>
-				</div>
-			</a>	
-			{% endfor %}
+			<ul>
+				{% for taller in talleres %}
+					<a href="{{ taller.get_absolute_url }}">
+						{% if taller.tipo = 'taller' %}
+							<li class="taller">
+						{% else %}
+							<li class="webinar">
+						{% endif %}
+						<div class="fecha">
+							<div class="mes">{{ taller.fecha|date:"F" }}</div>
+							<div class="dia">{{ taller.fecha|date:"d" }}</div>
+						</div>
+						<div class="titulos">
+							{% if taller.tipo = 'taller' %}
+								<div class="tipo">Taller</div>
+							{% else %}
+								<div class="tipo">Webinar</div>
+							{% endif %}
+							<div class="titulo">{{taller.titulo}}</div>
+							<div class="horataller">{{ taller.fecha|date:"P" }} a {{ taller.hora_hasta|date:"P" }}</div>
+						</div>
+						<div class="descripcioncorta">{{taller.descripcion_corta}}</div>
+
+							{% if taller.tipo = 'taller' %}
+								<div class="lugar">Lugar: {{taller.lugar}}</div>
+							{% endif %}
+						<a class="botontaller" href="{{ taller.get_absolute_url }}" class="leerMas">Registrarme</a>
+							
+					</li></a>
+				{% endfor %}
+			</ul>
 	</div>
 </section>
 {% endblock %}

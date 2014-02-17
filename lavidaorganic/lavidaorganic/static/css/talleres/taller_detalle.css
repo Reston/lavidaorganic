@@ -1,7 +1,7 @@
 @charset 'utf-8';
 h2{
 	margin: 0;
-	font-size: 7em;
+	font-size: 4em;
 	color: #C8D075;
 }
 h3{
@@ -40,55 +40,46 @@ nav a{
 .logomenu img{
 	width: 200px;
 }
-
+.header{
+	display: inline-block;
+	margin-top: 43px;
+	width: 100%;
+	vertical-align: top;
+}
 .talleres{
 	background: url(../../img/patron.jpg);
 	}
-.talleres ul{
-	text-decoration: none;
-	padding: 0;
-}
-.talleres ul li{
-	box-shadow: 1px 1px 1px 2px #D1D9D2;
-	-webkit-box-shadow: 1px 1px 1px 2px #D1D9D2;
-	-moz-box-shadow: 1px 1px 1px 2px #D1D9D2;
+.tituloStyle{
 	display: inline-block;
-	width: 100%;
-	margin-left: 2%;
-	vertical-align: top;
-	height: 236px;
-	margin-bottom: 38px;
-}
-.talleres ul .taller{
-	background-color: #FFF;
-}
-.talleres ul .webinar{
-	background-color: #C8D075;
+	width: 75%;
+	height: 142px;
+	text-align: center;
 }
 .talleres .fecha{
 	display: inline-block;
-	width: 24%;
-	height: 101px;
+	width: 22%;
+	margin-right: 6px;
+	height: 157px;
 	vertical-align: top;
 	border-radius: 0% 0% 69% 0%;
+	background-color: #C8D075;
+	color: #FFF;
 }
 .talleres .fecha .mes{
 	text-align: center;
 	font-weight: bold;
 	font-size: 1.3em;
+	margin-top: 20px;
+
 }
 .talleres .fecha .dia{	
 	text-align: center;
 	font-weight: bold;
-	font-size: 3.7em;
+	font-size: 4.5em;
 	margin-left: -11px;
 	margin-top: -8px;
 }
-.webinar .fecha, .webinar .botontaller{
-	background-color: #FFF;
-	color: #C8D075;	
-}
-.taller .fecha, .taller .botontaller{
+.talleres .fecha, .taller .botontaller{
 	background-color: #C8D075;
 	color: #FFF;
 }
@@ -96,25 +87,15 @@ nav a{
 	text-decoration: none;
 }
 
-.talleres .titulos{
+.talleres .detalles{
 	display: inline-block;
-	width: 66%;
-	margin-bottom: 2px;
-	height: 105px;
-	overflow: hidden;
-}
-.webinar .titulos{
-	color: #FFF;
-}
-.taller .titulos{
+	width: 100%;
+	margin-bottom: 12px;
+	font-size: 2em;
 	color: #C8D075;
-}
-.talleres .titulos .tipo{
 	text-align: right;
-	font-size: 2.6em;
-	font-weight: bold;
-	text-decoration: none;
 }
+
 .talleres .titulos .titulo{ 
 	font-weight: bold;
 	overflow: hidden;
@@ -122,36 +103,12 @@ nav a{
 	font-size: 1.5em;
 	margin-top: -10px;
 	}
-.talleres .descripcioncorta{
+.talleres .descripcion{
 	text-align: justify;
 	color: #000;
-	height: 47px;
+	width: 100%;
+	text-align: center;
 	margin-top: 4px;
-	padding: 0px 92px;
-	overflow: hidden;
 	margin-bottom: 5px;
 
-}
-.webinar .descripcioncorta{
-	height: 71px;
-}
-.lugar{
-	padding: 0 20px;
-	text-align: center;
-	color: #000;
-	height: 19px;
-	overflow: hidden;
-
-}
-.horataller{
-	text-align: right;
-}
-.botontaller{
-	display: block;
-	width: 55%;
-	padding: 7px;
-	text-align: center;
-	text-decoration: none;
-	margin: 0px auto;
-	margin-top: 5px;
 }
