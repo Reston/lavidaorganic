@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 from django.db import models
 from django.dispatch import receiver
 from paypal.standard.ipn.signals import payment_was_successful, payment_was_flagged
@@ -13,8 +14,8 @@ def show_me_the_money(sender, **kwargs):
 	print ipn_obj.mc_gross #cantidad pagada
 	if ipn_obj.item_name == 'Asesoria Completa Personalizada' and ipn_obj.mc_gross == '199.99':
 		#ENVIAR CORREO
-		mensaje = u'Gracias por realizar el pago para la Asesoria Completa Personalizada\n Pago realizado por: 199.99 $\n Para continuar con los pasos para realizar la Asesoria \
-		debe ir a la siguiente dirección para llenar la historia de salud que sería el segundo paso por completar.\n Enlace para la historia: http://lavidaorganic.com/historia-de-salud/ '
+		mensaje = u'Gracias por realizar el pago para la Asesoria Completa Personalizada\n Pago realizado por: 199.99 $\n Para continuar con los pasos para realizar la Asesoria'
+		+ 'debe ir a la siguiente dirección para llenar la historia de salud que sería el segundo paso por completar.\n Enlace para la historia: http://lavidaorganic.com/historia-de-salud/ '
 		send_mail('Pago recibido por La Vida Organica - Asesoria Completa Personalizada', mensaje, 'ventas@lavidaorganic.com', [ipn_obj.payer_email], fail_silently=False)
 		#print ipn_obj.payer_email
 		#print ipn_obj.first_name
@@ -26,6 +27,9 @@ def show_me_the_money(sender, **kwargs):
 		send_mail('Pago recibido por La Vida Organica - Consulta Personalizada', mensaje, 'ventas@lavidaorganic.com', [ipn_obj.payer_email], fail_silently=False)
 		#print ipn_obj.payer_email
 		#print ipn_obj.first_name
+	else:
+		#Aquí se debe realizar lo necesario pasa saber si pago bien un taller, el precio que es y registrar el usuario a ese taller.
+		pass
 	return
 
 @receiver(payment_was_flagged)

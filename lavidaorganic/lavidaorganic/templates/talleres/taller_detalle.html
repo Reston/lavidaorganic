@@ -12,8 +12,7 @@ Talleres La vida orgánica.
 <link rel="stylesheet" type="text/css" href="{% static 'css/talleres/taller_detalle.css' %}">
 {% endblock %}
 {% block js %}
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/propios/selectable.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 {% endblock %}
 {% block navi %}
 	<div class="logomenu">
@@ -49,8 +48,11 @@ Talleres La vida orgánica.
 						{% if taller.tipo = 'taller' %}
 							<div class="lugar">Lugar: {{taller.lugar}}</div>
 						{% endif %}	
-				</div>	
-				</div>			
+					</div>
+				</div>
+				<div class="botonPaypal">
+					{{form_taller.sandbox}}
+				</div>
 	</div>
 </section>
 {% endblock %}
