@@ -181,8 +181,8 @@ LOGGING = {
 #Configuraciones para enviar mensajes usando gmail
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = '*@gmail.com'
-EMAIL_HOST_PASSWORD = '*'
+EMAIL_HOST_USER = 'ciem.luz.mail@gmail.com'
+EMAIL_HOST_PASSWORD = 'ciem1234'
 EMAIL_POST = 587
 
 #Paypal settings
