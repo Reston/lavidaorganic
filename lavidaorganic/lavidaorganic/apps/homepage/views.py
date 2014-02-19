@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
 #from lavidaorganic import settings
-from lavidaorganic.apps.homepage.forms import contactForm, boletinForm
+from lavidaorganic.apps.homepage.forms import contactForm, boletinForm, historiaNutricionalForm
 from django.template import RequestContext
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
@@ -71,7 +71,9 @@ def services(request):
 
 @csrf_exempt
 def historia(request):
-	return render_to_response('homepage/historia.html', context_instance=RequestContext(request))
+	form = historiaNutricionalForm()
+	ctx = {'form': form}
+	return render_to_response('homepage/historia.html', ctx, context_instance=RequestContext(request))
 
 def contact(request):
 	success = False
