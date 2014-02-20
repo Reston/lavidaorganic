@@ -27,20 +27,21 @@ La vida organica - Inicio
 				<div class="circulo"><img src="{% static 'img/logoinicio.png' %}" alt="Logo de La vida organic"></div>
 			</div>
 			<div class="suscripcion">
+				{% if newsletter %}
 				<form method="POST" action="#">{% csrf_token %}
-					{% if newsletter %}
+					
 					<div class="correo">
 						{{ form.subject.errors }}
 						<label for="id_email">Suscribe tu correo eléctronico:</label>
 						{{ form.correo }}
 					</div>
-					{% else %}
-					<div class="correo">
-						¡BIENVENIDO!
-					</div>
-					{% endif %}
 					<input type="submit">
 				</form>
+				{% else %}
+				<div class="correo">
+					¡BIENVENIDO!
+				</div>
+				{% endif %}
 			</div>
 			<div class="redesInicio">
 				<ul>
@@ -95,49 +96,13 @@ La vida organica - Inicio
 		<div class="wrapper">
 			<h2>BLOG <span>Últimas Entradas</span></h2>
 				<ul class="listaNoticias">
-					<li class="noticia">
-						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
-						<div class="derecha">
-							<div class="tituloNoticia">Lorem ipsum testo</div>
-							<div class="resumen">
-								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. justo. Nullam dictum felis eu pede mollis pretium.</p>
-							</div>
-							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
-						</div>
-					</li>
-					<li class="noticia">
-						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
-						<div class="derecha">
-							<div class="tituloNoticia">Lorem ipsum testo</div>
-							<div class="resumen">
-								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
-							</div>
-							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
-						</div>	
-					</li>
-					<li class="noticia">
-						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
-						<div class="derecha">
-							<div class="tituloNoticia">Lorem ipsum testo</div>
-							<div class="resumen">
-								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
-							</div>
-							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
-						</div>	
-					</li>
-					<li class="noticia">
-						<img src="{{ STATIC_URL }}img/testimage.jpg" alt="lorem ipsum bla bla">
-						<div class="derecha">
-							<div class="tituloNoticia">Lorem ipsum testo</div>
-							<div class="resumen">
-								<p>justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
-							</div>
-							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
-						</div>	
-					</li>
-		{% for item in entradas %}
+				{% for item in entradas %}
 					<li>
+						{% if item.image %}
 						<img src="{{ MEDIA_URL }}{{item.image}}" width ="241" height="200" alt="{{ item.title }}">
+						{% else %}
+						<img src="{% static 'img/logoinicio.png' %}" width ="241" height="200" alt="Sin imagen">
+						{% endif %}
 						<div class="derecha">
 							<div class="tituloNoticia">{{ item.title }}</div>
 							<div class="resumen">
@@ -148,8 +113,7 @@ La vida organica - Inicio
 							<a href="{{ item.get_absolute_url }}" class="leerMas">Leer más</a>
 						</div>	
 					</li>
-
-		{% endfor %}
+				{% endfor %}
 				</ul>
 			<h3><a href="/blog">Ver todas las noticias</a></h3>
 		</div>

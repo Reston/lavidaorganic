@@ -93,7 +93,10 @@ nav a{
 	border-right: none;
 	color: #FFF;
 }
-
+.correo{
+	line-height: 100px;
+	height: 100px;
+}
 .redesInicio{
 	position: relative;
 	left: 42%;
@@ -263,14 +266,15 @@ nav a{
 .ultimasEntradas  ul li img{
 	display: inline-block;
 	width: 270px;
-	height: 250px;
+	height: 253px;
+	background: #C8D075;
 }
 .ultimasEntradas  ul li .derecha{
 	display: inline-block;
 	width: 42%;
 	vertical-align: top;
 	background-color: #C8D075;
-	height: 250px;
+	height: 253px;
 	margin-left: -4px;
 	color: #FFF;
 	overflow: hidden;

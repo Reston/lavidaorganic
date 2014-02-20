@@ -21,6 +21,7 @@ urlpatterns = patterns(
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 	url(r'^blog/', include('zinnia.urls')),
 	url(r'^comments/', include('django.contrib.comments.urls')),
+	(r'^tinymce/', include('tinymce.urls')), 
 	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'^admin/password_reset/$', 'django.contrib.auth.views.password_reset', name='admin_password_reset'),
