@@ -9,6 +9,7 @@ Historia de salud - La vida organica
 {% endblock %}
 {% block js %}
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/historia.js"></script>
 {% endblock %}
 {% block navi %}
 	<div class="logomenu">
@@ -18,63 +19,62 @@ Historia de salud - La vida organica
 {% block contenido %}
 	<section class="fondoHistoria">
 		<div class="wrapper">
-			<h1>HISTORIA DE COSAS LLENAR!!</h1>
-			<form action="#" method="POST" class="">
+			<h2>HISTORIA DE SALUD </h2>
+			<form id="formulario" action="#" method="POST">
 				{% csrf_token %}
-				<div class="campo">
-					{{ field.errors }}
-					<label >Nombre:</label>
-					{{ form.nombre }}
-					{{ form.nombre.errors }}
+				<div class="izquierda1">	
+					<div class="campo">
+						{{ field.errors }}
+						<label >Nombre:</label>
+						{{ form.nombre }}
+						{{ form.nombre.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label >Apellido:</label>
+						{{ form.apellido }}
+						{{ form.apellido.errors }}
+					</div>	
+					<div class="campo">
+						{{ field.errors }}
+						<label >Número de Teléfono:</label>
+						{{ form.telefono }}
+						{{ form.telefono.errors }}
+					</div>					
+					<div class="campo">
+						{{ field.errors }}
+						<label >Dirección Actual:</label>
+						{{ form.direccion }}
+						{{ form.direccion.errors }}
+					</div>
 				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >Apellido:</label>
-					{{ form.apellido }}
-					{{ form.apellido.errors }}
+				<div class="derecha1">		
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Cada cuanto chequea su e-mail?</label>
+						{{ form.frecuencia_email }}
+						{{ form.frecuencia_email.errors }}
+					</div>	
+
+					<div class="campo">
+						{{ field.errors }}
+						<label >Fecha de Nacimiento:</label>
+						{{ form.fecha_nacimiento }}
+						{{ form.fecha_nacimiento.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label >Lugar de Nacimiento:</label>
+						{{ form.lugar_nacimiento }}
+						{{ form.lugar_nacimiento.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label >Estatura:</label>
+						{{ form.estatura }} metros
+						{{ form.estatura.errors }}
+					</div>
 				</div>	
-				<div class="campo">
-					{{ field.errors }}
-					<label >Dirección Actual:</label>
-					{{ form.direccion }}
-					{{ form.direccion.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Cada cuanto chequea su e-mail?</label>
-					{{ form.frecuencia_email }}
-					{{ form.frecuencia_email.errors }}
-				</div>	
-				<div class="campo">
-					{{ field.errors }}
-					<label >Número de Teléfono:</label>
-					{{ form.telefono }}
-					{{ form.telefono.errors }}
-				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >Apellido:</label>
-					{{ form.apellido }}
-					{{ form.apellido.errors }}
-				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >Fecha de Nacimiento:</label>
-					{{ form.fecha_nacimiento }}
-					{{ form.fecha_nacimiento.errors }}
-				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >Lugar de Nacimiento:</label>
-					{{ form.lugar_nacimiento }}
-					{{ form.lugar_nacimiento.errors }}
-				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >Estatura:</label>
-					{{ form.estatura }}
-					{{ form.estatura.errors }}
-				</div>
 				<p>Ingrese su historial de peso:</p>
 				<ul class="pesos">
 					<li>
@@ -83,12 +83,10 @@ Historia de salud - La vida organica
 						<label >Peso Actual:</label>
 						{{ form.peso_actual }}
 						{{ form.peso_actual.errors }}
+						{{ field.errors }}
+						{{ form.peso_metrica }}
+						{{ form.peso_metrica.errors }}						
 						</div>	
-						<div class="metrica">
-							{{ field.errors }}
-							{{ form.peso_metrica }}
-							{{ form.peso_metrica.errors }}
-						</div>
 					</li>
 					<li>
 						<div class="campo">
@@ -96,11 +94,9 @@ Historia de salud - La vida organica
 						<label >Peso hace 6 meses:</label>
 						{{ form.peso_seismeses }}
 						{{ form.peso_seismeses.errors }}
-						</div>	
-						<div class="metrica">
-							{{ field.errors }}
-							{{ form.peso_metrica }}
-							{{ form.peso_metrica.errors }}
+						{{ field.errors }}
+						{{ form.peso_metrica }}
+						{{ form.peso_metrica.errors }}
 						</div>
 					</li>
 					<li>
@@ -109,237 +105,282 @@ Historia de salud - La vida organica
 						<label >Peso hace 1 año:</label>
 						{{ form.peso_lastyear }}
 						{{ form.peso_lastyear.errors }}
-						</div>	
-						<div class="metrica">
-							{{ field.errors }}
-							{{ form.peso_metrica }}
-							{{ form.peso_metrica.errors }}
+						{{ field.errors }}
+						{{ form.peso_metrica }}
+						{{ form.peso_metrica.errors }}
 						</div>
 					</li>											
 				</ul>
-				<div class="campo">
+				<div class="campo izquierda2">
 					{{ field.errors }}
 					<label >¿Quiere que su peso sea diferente?</label>
 					{{ form.peso_sino }}
 					{{ form.peso_sino.errors }}
 				</div>
-				<div class="campo">
+				<div id="explique" class="campo derecha2 hidden">
 					{{ field.errors }}
 					<label >¿Por qué?</label>
 					{{ form.desea_rebajar }}
 					{{ form.desea_rebajar.errors }}
 				</div>
-				<h2> Información Social </h2>				
-				<div class="campo">
-					{{ field.errors }}
-					<label >Estado Civil:</label>
-					{{ form.estado_civil }}
-					{{ form.estado_civil.errors }}
+				<div class="tituloseccion">
+					<div class="seccionline1"></div>
+					<h2> Información Social </h2>	
+					<div class="seccionline2"></div>	
 				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >Número de Hijos:</label>
-					{{ form.numero_hijos }}
-					{{ form.numero_hijos.errors }}
+				<div class="izquierda1">		
+					<div class="campo">
+						{{ field.errors }}
+						<label >Estado Civil:</label>
+						{{ form.estado_civil }}
+						{{ form.estado_civil.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label >Número de Hijos:</label>
+						{{ form.numero_hijos }}
+						{{ form.numero_hijos.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label >Mascota:</label>
+						{{ form.mascota }}
+						{{ form.mascota.errors }}
+					</div>	
 				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >Mascota:</label>
-					{{ form.mascota }}
-					{{ form.mascota.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >Ocupación:</label>
-					{{ form.ocupacion }}
-					{{ form.ocupacion.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >Horas a la semana (Ocupación):</label>
-					{{ form.horas_semana }}
-					{{ form.horas_semana.errors }}
-				</div>		
-				<h2>Información de Salud </h2>
-				<div class="campo">
+				<div class="derecha1">	
+					<div class="campo">
+						{{ field.errors }}
+						<label >Ocupación:</label>
+						{{ form.ocupacion }}
+						{{ form.ocupacion.errors }}
+					</div>		
+					<div class="campo">
+						{{ field.errors }}
+						<label >Horas a la semana (Ocupación):</label>
+						{{ form.horas_semana }} horas
+						{{ form.horas_semana.errors }}
+					</div>	
+				</div>	
+				<div class="tituloseccion">
+					<div class="seccionline1"></div>
+					<h2>Información de Salud </h2>
+					<div class="seccionline2 saludline"></div>	
+				</div>				
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >Por favor escriba lo que le está molestando:</label>
 					{{ form.molestias }}
 					{{ form.molestias.errors }}
 				</div>		
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Cual es su meta?</label>
 					{{ form.meta }}
 					{{ form.meta.errors }}
 				</div>		
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿En que punto de su vida se ha sentido mejor?</label>
 					{{ form.punto_vida }}
 					{{ form.punto_vida.errors }}
 				</div>		
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Alguna enfermedad/hospitalización/tratamiento serio el que yo deba saber?</label>
 					{{ form.enfermedad }}
 					{{ form.enfermedad.errors }}
 				</div>		
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Cómo es/era la salud de su madre y padre?</label>
 					{{ form.salud_madre }}
 					{{ form.salud_madre.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Qué tipo de sangre es?</label>
-					{{ form.tipo_sangre }}
-					{{ form.tipo_sangre.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Tiene problemas de dormir? </label>
-					{{ form.problemas_dormir }}
-					{{ form.problemas_dormir.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Cuantas horas duerme?</label>
-					{{ form.horas_duerme }} horas
-					{{ form.horas_duerme.errors }}
-				</div>					
-				<div class="campo">
+				</div>
+				<div class="izquierda1 margintop">		
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Qué tipo de sangre es?</label>
+						{{ form.tipo_sangre }}
+						{{ form.tipo_sangre.errors }}
+					</div>	
+					<div class="campo">
+						{{ field.errors }}
+						<label >Género:</label>
+						{{ form.genero }}
+						{{ form.genero.errors }}
+					</div>	
+				</div>
+				<div class="derecha1 margintop">				
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Tiene problemas de dormir? </label>
+						{{ form.problemas_dormir }}
+						{{ form.problemas_dormir.errors }}
+					</div>		
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Cuantas horas duerme?</label>
+						{{ form.horas_duerme }} horas
+						{{ form.horas_duerme.errors }}
+					</div>	
+				</div>	
+				<div class="campo izquierda2">
 					{{ field.errors }}
 					<label >¿Se levanta en la noche? </label>
 					{{ form.levanta_noche_sino }}
 					{{ form.levanta_noche_sino.errors }}
 				</div>	
-				<div class="campo">
+				<div id="explique2" class="campo derecha2 hidden">
 					{{ field.errors }}
 					<label >¿Por qué?</label>
 					{{ form.levanta_noche }}
 					{{ form.levanta_noche.errors }}
 				</div>															
-				<div class="campo">
+				<div class="campo izquierda2">
 					{{ field.errors }}
-					<label >¿Tiene algún dolor/inflamación?</label>
+					<label>¿Tiene algún dolor/inflamación?</label>
+					{{ form.dolor_inflamacion_sino }}
+					{{ form.dolor_inflamacion_sino.errors }}
+				</div>
+				<div  id="explique3" class="campo derecha2 hidden">
+					{{ field.errors }}
+					<label>Explique:</label>
 					{{ form.dolor_inflamacion }}
 					{{ form.dolor_inflamacion.errors }}
-				</div>	
-				<div class="campo">
+				</div>						
+				<div class="campo izquierda2">
 					{{ field.errors }}
 					<label >¿Estreñimiento/Diarrea/Gas?</label>
 					{{ form.estrenimiento_sino }}
 					{{ form.estrenimiento_sino.errors }}
 				</div>	
-				<div class="campo">
+				<div id="explique4" class="campo derecha2 hidden">
 					{{ field.errors }}
 					<label >Por favor explique:</label>
 					{{ form.estrenimiento }}
 					{{ form.estrenimiento.errors }}
 				</div>	
-				<div class="campo">
+				<div class="campo izquierda2">
 					{{ field.errors }}
 					<label >¿Tiene alguna alergia o es sensitivo a algo?</label>
 					{{ form.alergia_sino }}
 					{{ form.alergia_sino.errors }}
 				</div>	
-				<div class="campo">
+				<div id="explique5" class="campo derecha2 hidden">
 					{{ field.errors }}
 					<label >Por favor explique:</label>
 					{{ form.alergia }}
 					{{ form.alergia.errors }}
-				</div>															
-				<div class="campo">
-					{{ field.errors }}
-					<label >Género:</label>
-					{{ form.genero }}
-					{{ form.genero.errors }}
+				</div>	
+				<div id="periodoseccion" class="nodisplay">												
+				<div class="tituloseccion">
+					<div class="seccionline1"></div>
+					<h2>Periodos </h2>
+					<div class="seccionline2 periodoline"></div>	
+				</div>		
+					
+				<div class="izquierda1">	
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Son sus periodos regulares?</label>
+						{{ form.periodo_regular }}
+						{{ form.periodo_regular.errors }}
+					</div>		
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Cuantos dias le dura el periodo?</label>
+						{{ form.dias_periodo }} dias.
+						{{ form.dias_periodo.errors }}
+					</div>	
 				</div>
-				<h2>Peridos </h2>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Son sus periodos regulares?</label>
-					{{ form.periodo_regular }}
-					{{ form.periodo_regular.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Cuantos dias le dura el periodo?</label>
-					{{ form.dias_periodo }} dias.
-					{{ form.dias_periodo.errors }}
-				</div>		
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Con que frecuencia?</label>
-					{{ form.frecuencia_periodo }}
-					{{ form.frecuencia_periodo.errors }}
-				</div>		
-				<div class="campo">
+				<div class="derecha1">	
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Con que frecuencia?</label>
+						{{ form.frecuencia_periodo }}
+						{{ form.frecuencia_periodo.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label >¿Tiene actualmente o casi llega a la menopausia?</label>
+						{{ form.menopausia }}
+						{{ form.menopausia.errors }}
+					</div>	
+				</div>						
+				<div class="campo izquierda2">
 					{{ field.errors }}
 					<label >¿Sus periodos son dolorosos?</label>
 					{{ form.dolorperiodo_sino }}
 					{{ form.dolorperiodo_sino.errors }}
 				</div>		
-				<div class="campo">
+				<div id="explique6" class="campo derecha2 hidden">
 					{{ field.errors }}
 					<label >Explique sus síntomas:</label>
 					{{ form.sintomas_periodo }}
 					{{ form.sintomas_periodo.errors }}
 				</div>		
-				<div class="campo">
+				<div class="campo izquierda2">
 					{{ field.errors }}
-					<label >¿Tiene actualmente o casi llega a la menopausia?</label>
-					{{ form.menopausia }}
-					{{ form.menopausia.errors }}
-				</div>		
-				<div class="campo">
+					<label >¿Historial de pastillas anticonceptivas? </label>
+					{{ form.pastillas_sino }}
+					{{ form.pastillas_sino.errors }}
+				</div>	
+				<div id="explique7" class="campo derecha2 hidden">
 					{{ field.errors }}
-					<label >Historial de pastillas anticonceptivas </label>
+					<label >Explique su Historial de pastillas anticonceptivas </label>
 					{{ form.pastillas_anticonceptivas }}
 					{{ form.pastillas_anticonceptivas.errors }}
 				</div>		
-				<div class="campo">
+				<div class="campo izquierda2">
 					{{ field.errors }}
 					<label >¿Experimenta infecciones vaginales o infecciones urinarias?</label>
 					{{ form.infecciones_sino }}
 					{{ form.infecciones_sino.errors }}
 				</div>		
-				<div class="campo">
+				<div id="explique8" class="campo derecha2 hidden">
 					{{ field.errors }}
 					<label >Por favor explique:</label>
 					{{ form.infecciones_vaginales }}
 					{{ form.infecciones_vaginales.errors }}
 				</div>		
-				<h2>Historial Médico</h2>
-				<div class="campo">
+			</div>
+				<div class="tituloseccion">
+					<div class="seccionline1"></div>
+					<h2>Historial Médico</h2>
+					<div class="seccionline2 medicoline"></div>	
+				</div>				
+				<div class="campo 2 izquierda2">
 					{{ field.errors }}
 					<label >¿Toma actualmente suplementos/medicamentos?</label>
 					{{ form.suplementos_sino }}
 					{{ form.suplementos_sino.errors }}
 				</div>		
-				<div class="campo">
+				<div id="explique9" class="campo derecha2 hidden">
 					{{ field.errors }}
 					<label >Por favor listar:</label>
 					{{ form.suplementos }}
 					{{ form.suplementos.errors }}
 				</div>		
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Algúna terapia o actividad sanadora que esta haciendo? (acupuntura, quiropractico, masajes, ene-mas etc)</label>
 					{{ form.terapia_sanadora }}
 					{{ form.terapia_sanadora.errors }}
 				</div>	
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Que rol juega los deportes o actividad fisica en su vida?</label>
 					{{ form.rol_deporte }}
 					{{ form.rol_deporte.errors }}
 				</div>
-				<h2>Información de Alimentos</h2>
+				<div class="tituloseccion">
+					<div class="seccionline1"></div>
+					<h2>Información de Alimentos</h2>
+					<div class="seccionline2 alimentosline"></div>	
+				</div>				
 				<p>¿Cómo era la alimentación en su infancia?</p>
-				<ul class="alimento_infancia">
+				<ul class="alimentos">
 					<li>
 						<div class="campo">
 						{{ field.errors }}
@@ -381,7 +422,7 @@ Historia de salud - La vida organica
 					</li>			
 				</ul>	
 				<p>¿Cómo es su alimentación actualmente?</p>
-				<ul class="alimento_actual">
+				<ul class="alimentos">
 					<li>
 						<div class="campo">
 						{{ field.errors }}
@@ -421,57 +462,63 @@ Historia de salud - La vida organica
 						{{ form.liquido_actual.errors }}
 						</div>	
 					</li>			
-				</ul>								
-				<div class="campo">
+				</ul>		
+				<div id="cocina" class="campo izquierda1">
+					{{ field.errors }}
+					<label id="cocinalabel">¿Usted cocina?</label>
+					{{ form.cocina }}
+					{{ form.cocina.errors }}
+				</div>
+				<div id="comida" class="campo derecha1">
+					{{ field.errors }}
+					<label id="comidalabel">¿Que porcentaje de la comida es en casa?</label>
+					{{ form.comida_casa }}
+					{{ form.comida_casa.errors }}
+				</div>												
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Tendrá el soporte de amigos y familiares para hacer los cambios necesarios?</label>
 					{{ form.soporte_amigos }}
 					{{ form.soporte_amigos.errors }}
-				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Usted cocina?</label>
-					{{ form.cocina }}
-					{{ form.cocina.errors }}
-				</div>
-				<div class="campo">
-					{{ field.errors }}
-					<label >¿Que porcentaje de la comida es en casa?</label>
-					{{ form.comida_casa }}
-					{{ form.comida_casa.errors }}
-				</div>					
-				<div class="campo">
+				</div>			
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Que comida/alimento le cae absolutamente mal?</label>
 					{{ form.comidas_mal }}
 					{{ form.comidas_mal.errors }}
 				</div>
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Que considera usted descansar?</label>
 					{{ form.descansar_definicion }}
 					{{ form.descansar_definicion.errors }}
 				</div>														
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Tiene ansiedad al azúcar, cafe, cigarros o alguna adicción?</label>
 					{{ form.adicciones }}
 					{{ form.adicciones.errors }}
 				</div>
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >Lo más importante que tengo que cambiar de mi dieta es:</label>
 					{{ form.cambiar_dieta }}
 					{{ form.cambiar_dieta.errors }}
 				</div>
-				<div class="campo">
+				<div class="campo textareas">
 					{{ field.errors }}
 					<label >¿Alguna otra cosa que quiera compartir?</label>
 					{{ form.algo_mas }}
 					{{ form.algo_mas.errors }}
-				</div>													
+				</div>	
+					<div class="nodisplay">
+						{{form.informacion_salud}}
+						{{form.informacion_alimentacion}}	
+						{{form.alimentacion_infancia}}
+						{{form.alimentacion_actual}}	
+					</div>											
 				<div class="botonEnviar">
-					<input type="submit">
+					<input id ="boton" type="submit" value="Enviar">
 				</div>
 			</form>			
 		</div>
