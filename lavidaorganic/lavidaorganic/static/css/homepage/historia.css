@@ -203,3 +203,33 @@ width: 56.1%;
 .alimentosline{
 	width: 286px;
 }
+.errorlist{
+	list-style: none;
+	padding: 0;
+}
+.errorlist li{
+	width: 95%;
+	display: block;
+	background-color: #FFDBEE;
+	color: #F00;
+	padding: 8px;
+}
+.errorform{
+	width: 100%;
+	display: block;
+	background-color: #FFDBEE;
+	color: #F00;
+	padding: 8px;	
+	margin-bottom: 20px;
+}
+#boton{
+	background-color: #C8D075;
+	color: #FFF;
+	width: 30%;
+	padding: 7px;
+	margin: 27px 0;
+}
+.botonEnviar{
+	width: 100%;
+	text-align: center;
+}

@@ -20,6 +20,9 @@ Historia de salud - La vida organica
 	<section class="fondoHistoria">
 		<div class="wrapper">
 			<h2>HISTORIA DE SALUD </h2>
+			{% if form.errors %}
+	        <div class="errorform">Por favor corregir los errores debajo.</div>
+	   		{% endif %}			
 			<form id="formulario" action="#" method="POST">
 				{% csrf_token %}
 				<div class="izquierda1">	

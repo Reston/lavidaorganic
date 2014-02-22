@@ -184,5 +184,27 @@ $(document).ready(function(){
    	 	$('#id_alimentacion_actual').val(alimentacion_actual);   	
    	 });
    	 
-   	 				 	 	
+   	 /*Validación sólo números */
+function onlynumber (e) {
+                var keyCode = e.which; // Capture the event
+                //190 is the key code of decimal if you dont want decimals remove this condition keyCode != 190
+                if (keyCode != 8 && keyCode != 9 && keyCode != 13 && keyCode != 37 && keyCode != 38 && keyCode != 39 && keyCode != 40 && keyCode != 46 && keyCode != 110 && keyCode != 190) {
+                    if (keyCode < 48) {
+                        e.preventDefault();
+                    }
+                    else if (keyCode > 57 && keyCode < 96) {
+                        e.preventDefault();
+                    }
+                    else if (keyCode > 105) { 
+                        e.preventDefault();
+                    }
+                }
+            }           
+$('input[name="estatura"]').keydown(onlynumber);
+$('input[name="peso_actual"]').keydown(onlynumber);
+$('input[name="peso_seismeses"]').keydown(onlynumber);
+$('input[name="peso_lastyear"]').keydown(onlynumber);
+$('input[name="horas_semana"]').keydown(onlynumber);
+$('input[name="horas_duerme"]').keydown(onlynumber);
+$('input[name="dias_periodo"]').keydown(onlynumber);	 				 	 	
 });
