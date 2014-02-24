@@ -93,9 +93,8 @@ nav a{
 	border-right: none;
 	color: #FFF;
 }
-.correo{
-	line-height: 100px;
-	height: 100px;
+.correo input{
+	border-bottom: #FFF 2px solid !important;
 }
 .redesInicio{
 	position: relative;
