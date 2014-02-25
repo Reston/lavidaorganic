@@ -1,4 +1,10 @@
 @charset 'utf-8';
+h1{
+	padding: 50px 0;
+	margin: 0;
+	font-size: 7em;
+	color: #C8D075;
+}
 h2{
 	margin: 0;
 	color: white;
@@ -50,6 +56,89 @@ nav a{
 }
 .logomenu img{
 	width: 200px;
+}
+.quienessomos{
+	background: url(../../img/patron.jpg);
+}
+/* INTRODUCCION SERVICIOS */
+.descripcion .wrapper{
+	position: relative;
+}
+.introduccion{
+	text-align: justify;
+}
+.introduccion p{
+	background: #FFF;
+	padding: 12px;
+	color: #C8D075;
+}
+.verServicios{
+	display: block;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	color: #FFF;
+	background: #C8D075;
+	margin-bottom: 50px;
+}
+.titulo{
+	float: left;
+	color: #C8D075;
+	font-size: 3em;
+	text-align: center;
+	width: 560px;
+}
+.circuloVerde{
+	float: left;
+	color: white;
+	width: 560px;
+	height: 561px;
+	background: url(../../img/contactCircle.png) no-repeat top left;
+	text-align: center;
+	line-height: 1.4em;
+}
+.textWrap{
+	position: relative;
+	top: 75px;
+	width: 390px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.circuloVerde .bold{
+	font-weight: bold;
+}
+.rightpos{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.imagecircle{
+	-webkit-border-radius: 300px;
+	-moz-border-radius: 300px;
+	border-radius: 300px;
+}
+.img1pos{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 475px;
+	right: 0;
+}
+.img2pos{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 1150px;
+	left: 0;
+}
+.img3pos{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 1800px;
+	right: 0;
 }
 /* AREAS DE COACHING */
 .areascoaching h2{

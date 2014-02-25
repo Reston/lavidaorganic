@@ -9,6 +9,7 @@ Servicios de la vida organica
 {% endblock %}
 {% block js %}
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
 {% endblock %}
 {% block navi %}
 	<div class="logomenu">
@@ -17,7 +18,42 @@ Servicios de la vida organica
 {% endblock %}
 {% block contenido %}
 <section class="quienessomos">
-		<div class="tituloStyle"><h2>libre</h2></div>
+		<section class="descripcion">
+			<div class="wrapper">
+				<div class="introduccion">
+					<h1>Servicios</h1>
+					<p>Mi orientación nutricional y servicios de Coaching de salud y de vida, le da la oportunidad de llegar a su peso ideal, optimizar la digestión, aumentar el rendimiento deportivo, optimizar su metabolismo, conseguir una gran piel, las uñas y el cabello, o adelgazar, puedo proporcionar las herramientas, consejos y trucos que usted necesita para lograr lo que quiere! No son sólo para los que quieren bajar de peso, pero para cualquiera que quiera hacer un cambio de estilo de vida positivo y saludable. Doy la bienvenida a los clientes de todos los orígenes diversos, culturas y preferencias alimentarias. Sea cual sea su objetivo, estoy aquí en cada paso para entrenar, guiar, motivar, y llegar a lograr su meta!</p>
+					<a href="#servicios" class="verServicios">Ofertar un servicio</a>
+				</div>
+				<div class="titulo">Desintoxicación</div>
+				<div class="circuloVerde">
+					<div class="textWrap">
+						<p class="bold">“Sea cual sea su meta, un Detox leve o más completo es necesario para que su cuerpo funcione como debe ser y vea los resultados.”</p>
+						<p>Todos los días nuestro organismo es afectado por medio del agua, aire, comida, productos de belleza/limpieza y estilo de vida como por ejemplo el estrés. Gracias a órganos como el hígado y el riñón, la mayoría de estas toxinas son liberadas a través del sudor, orina y heces fecales. Sin embargo, el resto que no se libera es acumulado en la grasa del cuerpo. Pasamos años sin desintoxicar el cuerpo y esto conlleva a problemas graves que hoy en día muchísima gente lo esta experimentando. Si se siente estancada y siente que no le es fácil rebajar, puede que su cuerpo este congestionado. ¡Yo le puedo ayudar!</p>
+					</div>
+				</div>
+				<div class="titulo rightpos">Estilo de vida</div>
+				<div class="circuloVerde rightpos">
+					<div class="textWrap">
+						<p class="bold">“Para lograr una consulta optima, es muy importante para una Coach saber como es tu día a día. Tu nivel de estrés laboral o familiar. Pequeños detalles pueden hacer una gran diferencia.”</p>
+						<p>El estilo de vida es el mayor determinante de nuestra salud. Integra el conjunto de hábitos y conductas que modulan nuestra vida diaria.</p>
+						<p>Un estilo de vida saludable está configurado fundamentalmente por el mantenimiento de una dieta alimenticia suficiente y equilibrada, la abstinencia de tabaco, el consumo muy moderado de alcohol, la observancia de un patrón de utilización supervisado y controlado de ciertas sustancias y la práctica de una actividad física regular.</p>
+						<p>El disfrute de unos niveles de bienestar tanto físico como psíquico elevados es el resultado más probable de un estilo de vida saludable.</p>
+					</div>
+				</div>
+				<div class="titulo">Historial de salud</div>
+				<div class="circuloVerde">
+					<div class="textWrap">
+						<p class="bold">“Consultas personalizadas requieren de información y detalles para que la experiencia sea efectiva y satisfactoria. El alimento para una persona puede ser veneno para otra.”</p>
+						<p>Conociendo el historial de salud suyo y el de su familia, podremos tomar decisiones para seguir métodos de prevención y cambiar su estilo de vida para reducir el riesgo de padecer una determinada enfermedad a la cual usted y su familia pueden estar predispuestos geneticamente. Al aprender de su pasado, usted podrá tomar decisiones para proteger el futuro de su salud y la salud de sus familiares. </p>
+					</div>
+				</div>
+				<img class="imagecircle img1pos" src="{% static 'img/testimage.jpg' %}" alt="testimage">
+				<img class="imagecircle img2pos" src="{% static 'img/testimage.jpg' %}" alt="testimage">
+				<img class="imagecircle img3pos" src="{% static 'img/testimage.jpg' %}" alt="testimage">
+			</div>
+			<div class="clear"></div>
+		</section>
 		<section class="areascoaching">
 			<div class="wrapper">
 				<h2>Areas de Coaching</h2>
@@ -34,8 +70,7 @@ Servicios de la vida organica
 					</div>	
 			</div>
 		</section>
-
-		<section class="serviciosDisponibles">
+		<section id="servicios" class="serviciosDisponibles">
 			<div class="wrapper">
 				<h2>Servicios Disponibles</h2>
 				<div class="servicios">
@@ -106,4 +141,9 @@ Servicios de la vida organica
 			</div>
 		</section>
 </section>
+
+	<!-- BACK TOP BOX -->
+	<div id="back-top" class="back-top">
+		<a href="#home"><span>↑</span>Regresar arriba</a>
+	</div>
 {% endblock%}
