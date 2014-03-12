@@ -57,34 +57,56 @@ La vida organica - Inicio
 		<div class="wrapper">
 			<h2>Talleres</h2>
 			<ul>
-				{% for taller in talleres %}
-					<a href="{{ taller.get_absolute_url }}">
-						{% if taller.tipo = 'taller' %}
-							<li class="taller">
-						{% else %}
-							<li class="webinar">
-						{% endif %}
-						<div class="fecha">
-							<div class="mes">{{ taller.fecha|date:"F" }}</div>
-							<div class="dia">{{ taller.fecha|date:"d" }}</div>
-						</div>
-						<div class="titulos">
-							{% if taller.tipo = 'taller' %}
-								<div class="tipo">Taller</div>
-							{% else %}
-								<div class="tipo">Webinar</div>
-							{% endif %}
-							<div class="titulo">{{taller.titulo}}</div>
-							<div class="horataller">{{ taller.fecha|date:"P" }} a {{ taller.hora_hasta|date:"P" }}</div>
-						</div>
-						<div class="descripcioncorta">{{taller.descripcion_corta}}</div>
-
+				{% for taller in talleres %}					
+					{% if taller.tipo = 'taller' %}
+						<li class="taller">
+							<a href="{{ taller.get_absolute_url }}">
+							<div class="fecha">
+								<div class="mes">{{ taller.fecha|date:"F" }}</div>
+								<div class="dia">{{ taller.fecha|date:"d" }}</div>
+							</div>
+							<div class="titulos">
+								{% if taller.tipo = 'taller' %}
+									<div class="tipo">Taller</div>
+								{% else %}
+									<div class="tipo">Webinar</div>
+								{% endif %}
+								<div class="titulo">{{taller.titulo}}</div>
+								<div class="horataller">{{ taller.fecha|date:"P" }} a {{ taller.hora_hasta|date:"P" }}</div>
+							</div>
+							<div class="descripcioncorta">{{taller.descripcion_corta}}</div>
+							
 							{% if taller.tipo = 'taller' %}
 								<div class="lugar">Lugar: {{taller.lugar}}</div>
 							{% endif %}
-						<a class="botontaller" href="{{ taller.get_absolute_url }}" class="leerMas">Registrarme</a>
+							<a class="botontaller" href="{{ taller.get_absolute_url }}" class="leerMas">Registrarme</a>
+							</a>
+						</li>
+					{% else %}
+						<li class="webinar">
+							<a href="{{ taller.get_absolute_url }}">
+							<div class="fecha">
+								<div class="mes">{{ taller.fecha|date:"F" }}</div>
+								<div class="dia">{{ taller.fecha|date:"d" }}</div>
+							</div>
+							<div class="titulos">
+								{% if taller.tipo = 'taller' %}
+									<div class="tipo">Taller</div>
+								{% else %}
+									<div class="tipo">Webinar</div>
+								{% endif %}
+								<div class="titulo">{{taller.titulo}}</div>
+								<div class="horataller">{{ taller.fecha|date:"P" }} a {{ taller.hora_hasta|date:"P" }}</div>
+							</div>
+							<div class="descripcioncorta">{{taller.descripcion_corta}}</div>
 							
-					</li></a>
+							{% if taller.tipo = 'taller' %}
+								<div class="lugar">Lugar: {{taller.lugar}}</div>
+							{% endif %}
+							<a class="botontaller" href="{{ taller.get_absolute_url }}" class="leerMas">Registrarme</a>
+							</a>
+						</li>
+					{% endif %}					
 				{% endfor %}
 			</ul>
 			{% if numero > 3 %}

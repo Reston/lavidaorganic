@@ -35,7 +35,7 @@ nav a{
 .logomenu{
 	position: absolute;
 	top: -90px;
-	left: -35px
+	left: 10px;
 }
 .logomenu img{
 	width: 200px;
@@ -119,3 +119,4 @@ textarea{
 .mujer img{
 	width: 400px;
 }
+

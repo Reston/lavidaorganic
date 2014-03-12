@@ -43,6 +43,9 @@ footer{
 	background: url(../img/greyzz_@2X.png);
 	border-top: 5px solid #C8D075;
 }
+.redesFooter ul{
+	padding: 0;
+}
 .iconFooter{
 	width: 150px;
 	height: 150px;
@@ -126,7 +129,7 @@ footer .copyRight img{
 	position: fixed;
 	bottom: 5px;
 	right: 5px;
-	z-index: 1;
+	z-index: 100;
 }
 
 .back-top a {
@@ -168,4 +171,39 @@ footer .copyRight img{
 }
 .back-top a:hover span {
 	background-color: #777;
+}
+
+
+@media screen and (max-width: 1000px){
+	.wrapper{
+		width: 100%;
+	}
+
+	/* configuración back-to-top responsive */
+	.back-top a{
+		width: 60px;
+		text-shadow: 0 0 1px black;
+	}
+	.back-top span {
+		width: 40px;
+		height: 40px;
+		font-weight: bold;
+		font-size: 4em;
+		line-height: 30px;
+		background: none;
+		margin: 0 auto 0 auto;
+	}
+	.back-top a:hover span {
+		background:none;
+	}
+	/* END CONFIG back-to-top */
+	.footer-der{
+		width: 100%;
+	}
+	.footer-med{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 460px) {
+
 }

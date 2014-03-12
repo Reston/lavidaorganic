@@ -52,7 +52,7 @@ nav a{
 .logomenu{
 	position: absolute;
 	top: -90px;
-	left: -35px
+	left: 10px;
 }
 .logomenu img{
 	width: 200px;
@@ -141,46 +141,42 @@ nav a{
 	right: 0;
 }
 /* AREAS DE COACHING */
+.centrartextoverticalp{
+	margin-top: 88px;
+}
+.centrartextoverticallargo{
+	margin-top: 68px;
+}
 .areascoaching h2{
 	color: #C8D075;
 }
 .areascoaching ul{
 	list-style: none;
 	padding:0;
+	text-align: center;
 }
 .areascoaching ul li{
 	position: relative;
-	display: table-cell;
-	width: 163px;
-	height: 163px;
+	display: inline-block;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	vertical-align: middle;
 	text-align: center;
 	padding: 7px;
-	background-color: #FFF;
-}
-.fila{
-	position: relative;
-	height: 228px;
-	z-index: 1;
+	background-color: #C8D075;
+	z-index: 6;
 }
 .center{
 	text-align: center;
 }
-.fila div{
-	position: relative;
-	display: inline-block;
-	margin-left: 50px;
-}
-
-.fila div:before {
+.areascoaching ul li:before {
 	position: absolute;
 	content: "";
 	display: block;
-	background-color: #C8D075;
-	width: 205px;
-	height: 205px;
-	margin: -21px -12px;
+	background-color: #FFF;
+	width: 194px;
+	height: 194px;
 	border-radius: 50%;
 	z-index: -1;
 }
@@ -244,4 +240,73 @@ nav a{
 	font-size: 6em;
 	line-height: 0.5em;
 	vertical-align: top;
+}
+
+@media screen and (max-width: 1000px){
+	.headerPosition{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	nav{
+		position: static;
+		text-align: center;
+	}
+	nav a{
+		width: 19%;
+	}
+	.logomenu{
+		position: static;
+		text-align: center;
+	}
+	/*Servicios intro*/
+	.imagecircle{
+		display: none;
+	}
+	.servicios{
+		text-align: center;
+	}
+	.primero, .segundo{
+		width: 80%;
+		margin-bottom: 75px;
+	}
+	.listaInstrucciones li{
+		width: auto;
+		margin-left: 0;
+	}
+	.listaInstrucciones li span {
+		width: auto;
+	}
+	
+}
+/* Por los circulos es un poco más grande esto*/
+@media screen and (max-width: 575px) {
+	h1{
+		font-size: 3.5em;
+	}
+	nav a{
+		width: 100%;
+	}
+	.titulo{
+		width: 100%;
+		font-size: 2.5em;
+		margin-top: 30px;
+	}
+	.textWrap {
+		position: static;
+		width: 100%;
+	}
+	.circuloVerde{
+		background: #C8D075;
+		width: 100%;
+		height: auto;
+	}
+	.listaInstrucciones li{
+		margin-bottom: 30px;
+	}
+	.listaInstrucciones li span {
+		width: 65%;
+	}
+	.listaInstrucciones li img{
+		display: none;
+	}
 }

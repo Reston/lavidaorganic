@@ -81,9 +81,10 @@ textarea{
 .izquierda1 label, .derecha1 label{
 	display: inline-block;
 	width: 240px;
+	text-align: right;
 }
 .derecha1{
-	padding-left: 69px;
+	padding-left: 66px;
 }
 .izquierda1 .campo,.derecha1 .campo{
 	margin-bottom: 10px;
@@ -164,7 +165,7 @@ textarea{
 	width: 34.1%;
 }
 #comidalabel{
-	width: 354px;
+	width: 325px;
 }
 #cocinalabel{
 	width: 147px;
@@ -232,4 +233,14 @@ width: 56.1%;
 .botonEnviar{
 	width: 100%;
 	text-align: center;
+}
+
+.cuadroblanco{
+	box-shadow: 1px 1px 1px 2px #D1D9D2;
+	-webkit-box-shadow: 1px 1px 1px 2px #D1D9D2;
+	-moz-box-shadow: 1px 1px 1px 2px #D1D9D2;
+	background-color: #FFF;
+	color: #646D48;
+	border-radius: 5px;
+	padding: 16px;
 }

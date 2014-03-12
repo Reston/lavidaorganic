@@ -25,7 +25,8 @@ Historia de salud - La vida organica
 	   		{% endif %}			
 			<form id="formulario" action="#" method="POST">
 				{% csrf_token %}
-				<div class="izquierda1">	
+			<div class="cuadroblanco">
+					<div class="izquierda1">	
 					<div class="campo">
 						{{ field.errors }}
 						<label >Nombre:</label>
@@ -126,11 +127,13 @@ Historia de salud - La vida organica
 					{{ form.desea_rebajar }}
 					{{ form.desea_rebajar.errors }}
 				</div>
+			</div>
 				<div class="tituloseccion">
 					<div class="seccionline1"></div>
 					<h2> Información Social </h2>	
 					<div class="seccionline2"></div>	
 				</div>
+			<div class="cuadroblanco">
 				<div class="izquierda1">		
 					<div class="campo">
 						{{ field.errors }}
@@ -164,12 +167,14 @@ Historia de salud - La vida organica
 						{{ form.horas_semana }} horas
 						{{ form.horas_semana.errors }}
 					</div>	
-				</div>	
+				</div>
+			</div><!-- cuadro blanco -->
 				<div class="tituloseccion">
 					<div class="seccionline1"></div>
 					<h2>Información de Salud </h2>
 					<div class="seccionline2 saludline"></div>	
-				</div>				
+				</div>
+			<div class="cuadroblanco">
 				<div class="campo textareas">
 					{{ field.errors }}
 					<label >Por favor escriba lo que le está molestando:</label>
@@ -348,11 +353,13 @@ Historia de salud - La vida organica
 					{{ form.infecciones_vaginales.errors }}
 				</div>		
 			</div>
+			</div><!-- cuadro blanco -->
 				<div class="tituloseccion">
 					<div class="seccionline1"></div>
 					<h2>Historial Médico</h2>
 					<div class="seccionline2 medicoline"></div>	
-				</div>				
+				</div>
+			<div class="cuadroblanco">
 				<div class="campo 2 izquierda2">
 					{{ field.errors }}
 					<label >¿Toma actualmente suplementos/medicamentos?</label>
@@ -377,11 +384,13 @@ Historia de salud - La vida organica
 					{{ form.rol_deporte }}
 					{{ form.rol_deporte.errors }}
 				</div>
+			</div><!-- cuadro blanco -->
 				<div class="tituloseccion">
 					<div class="seccionline1"></div>
 					<h2>Información de Alimentos</h2>
 					<div class="seccionline2 alimentosline"></div>	
-				</div>				
+				</div>
+			<div class="cuadroblanco">
 				<p>¿Cómo era la alimentación en su infancia?</p>
 				<ul class="alimentos">
 					<li>
@@ -519,7 +528,8 @@ Historia de salud - La vida organica
 						{{form.informacion_alimentacion}}	
 						{{form.alimentacion_infancia}}
 						{{form.alimentacion_actual}}	
-					</div>											
+					</div>
+			</div><!-- cuadro blanco -->										
 				<div class="botonEnviar">
 					<input id ="boton" type="submit" value="Enviar">
 				</div>
