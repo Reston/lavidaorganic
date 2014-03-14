@@ -19,7 +19,8 @@ Historia de salud - La vida organica
 {% block contenido %}
 	<section class="fondoHistoria">
 		<div class="wrapper">
-			<h2>HISTORIA DE SALUD </h2>
+			<h1>HISTORIA DE SALUD </h1>
+			<p>Por favor responda detalladamente. Toda su información se mantendrá confidencial entre usted y su asesora de salud/vida.</p>
 			{% if form.errors %}
 	        <div class="errorform">Por favor corregir los errores debajo.</div>
 	   		{% endif %}			
@@ -117,7 +118,7 @@ Historia de salud - La vida organica
 				</ul>
 				<div class="campo izquierda2">
 					{{ field.errors }}
-					<label >¿Quiere que su peso sea diferente?</label>
+					<label >¿Desea que su peso sea diferente?</label>
 					{{ form.peso_sino }}
 					{{ form.peso_sino.errors }}
 				</div>
@@ -183,7 +184,7 @@ Historia de salud - La vida organica
 				</div>		
 				<div class="campo textareas">
 					{{ field.errors }}
-					<label >¿Cual es su meta?</label>
+					<label >¿Cuál es su meta?</label>
 					{{ form.meta }}
 					{{ form.meta.errors }}
 				</div>		
@@ -195,7 +196,7 @@ Historia de salud - La vida organica
 				</div>		
 				<div class="campo textareas">
 					{{ field.errors }}
-					<label >¿Alguna enfermedad/hospitalización/tratamiento serio el que yo deba saber?</label>
+					<label >¿Alguna enfermedad, hospitalización o tratamiento serio que yo deba conocer?</label>
 					{{ form.enfermedad }}
 					{{ form.enfermedad.errors }}
 				</div>		
@@ -222,7 +223,7 @@ Historia de salud - La vida organica
 				<div class="derecha1 margintop">				
 					<div class="campo">
 						{{ field.errors }}
-						<label >¿Tiene problemas de dormir? </label>
+						<label >¿Tiene problemas para dormir? </label>
 						{{ form.problemas_dormir }}
 						{{ form.problemas_dormir.errors }}
 					</div>		
@@ -247,7 +248,7 @@ Historia de salud - La vida organica
 				</div>															
 				<div class="campo izquierda2">
 					{{ field.errors }}
-					<label>¿Tiene algún dolor/inflamación?</label>
+					<label>¿Sufre de algún dolor o inflamación constante?</label>
 					{{ form.dolor_inflamacion_sino }}
 					{{ form.dolor_inflamacion_sino.errors }}
 				</div>
@@ -259,7 +260,7 @@ Historia de salud - La vida organica
 				</div>						
 				<div class="campo izquierda2">
 					{{ field.errors }}
-					<label >¿Estreñimiento/Diarrea/Gas?</label>
+					<label >¿Sufre de estreñimiento, diarreas o gases?</label>
 					{{ form.estrenimiento_sino }}
 					{{ form.estrenimiento_sino.errors }}
 				</div>	
@@ -271,7 +272,7 @@ Historia de salud - La vida organica
 				</div>	
 				<div class="campo izquierda2">
 					{{ field.errors }}
-					<label >¿Tiene alguna alergia o es sensitivo a algo?</label>
+					<label >¿Posee alguna alergia o es sensitivo a algo?</label>
 					{{ form.alergia_sino }}
 					{{ form.alergia_sino.errors }}
 				</div>	
@@ -374,7 +375,7 @@ Historia de salud - La vida organica
 				</div>		
 				<div class="campo textareas">
 					{{ field.errors }}
-					<label >¿Algúna terapia o actividad sanadora que esta haciendo? (acupuntura, quiropractico, masajes, ene-mas etc)</label>
+					<label >¿Algúna terapia o actividad sanadora que está haciendo? (acupuntura, quiropractico, masajes, ene-mas etc)</label>
 					{{ form.terapia_sanadora }}
 					{{ form.terapia_sanadora.errors }}
 				</div>	

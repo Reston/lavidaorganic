@@ -1,10 +1,5 @@
 @charset 'utf-8';
-h2{
-	display: inline-block;
-	margin: 0;
-	font-size: 3em;
-	color: #C8D075;
-}
+
 h3{
 	margin: 0;
 }
@@ -28,7 +23,8 @@ nav a{
 	display: inline-block;
 	width: 16%;
 	color: #FFF;
-	font-size: 1.5em;
+	font-size: 1.4em;
+	text-transform: uppercase;
 	text-shadow: 2px 1px 1px #000;
 	text-decoration: none;
 	text-align: center;
