@@ -1,16 +1,13 @@
 @charset 'utf-8';
-h1{
-	padding: 50px 0;
-	margin: 0;
-	font-size: 7em;
-	color: #C8D075;
-}
+
 h2{
+	font-family: 'Coda Caption', sans-serif;
 	margin: 0;
-	color: white;
-	font-size: 3em;
+	font-size: 4em;
+	color: #C8D075;
+	letter-spacing: -5px;
+	text-transform: uppercase;
 	text-align: center;
-	padding: 55px 0;
 }
 h3{
 	color: #C8D075;
@@ -29,6 +26,13 @@ header{
 	padding-bottom: 1px;
 	background:url(../../img/fondoinicio.jpg) no-repeat center left;
 }
+.titservicios{
+	font-family: 'Coda Caption', sans-serif;
+	margin: 0;
+	font-size: 6em;
+	color: #C8D075;
+	letter-spacing: -5px;
+}
 .headerPosition{
 	margin-top: 90px;
 	margin-bottom: 90px;
@@ -44,7 +48,8 @@ nav a{
 	display: inline-block;
 	width: 16%;
 	color: #FFF;
-	font-size: 1.5em;
+	font-size: 1.4em;
+	text-transform: uppercase;
 	text-shadow: 2px 1px 1px #000;
 	text-decoration: none;
 	text-align: center;
@@ -181,6 +186,13 @@ nav a{
 	z-index: -1;
 }
 /* SERVICIOS DISPONIBLES */
+.servicios{
+	margin-top: 52px;
+}
+.serviciosDisponibles h2{
+	color: #FFF;
+	height: 100%;
+}
 .serviciosDisponibles{
 	background: #C1CA61;
 }
@@ -194,6 +206,12 @@ nav a{
 	border-radius: 5px;
 	text-align: center;
 	position: relative;
+}
+.textprimero{
+	padding: 25px;
+}
+.primero ul{
+	margin-bottom: 74px;
 }
 .primero .numero, .segundo .numero{
 	position: absolute;

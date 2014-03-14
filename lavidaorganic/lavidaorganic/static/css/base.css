@@ -4,15 +4,18 @@ html, body{
 	height: 100%;
 	background: white;
 	color: black;	
+	font-family: 'Droid Sans', sans-serif;
 }
 
 h1{
+	font-family: 'Coda Caption', sans-serif;
 	margin: 0;
-	color: white;
-	font-family: 'Lobster', Helvetica, Arial;
-	line-height: 38px;
-	margin-top: 65px;
+	font-size: 6em;
+	color: #C8D075;
+	letter-spacing: -10px;
+	text-transform: uppercase;
 }
+
 .wrapper{
 	width: 960px;
 	height: 100%;
@@ -38,6 +41,7 @@ footer{
 	border-radius: 400px;
 	display: inline-block;
 	background: #C8D075;
+	margin-left: 23px;
 }
 .redesFooter{
 	background: url(../img/greyzz_@2X.png);

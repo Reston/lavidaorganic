@@ -21,7 +21,7 @@ La vida organica - Inicio
 	<section class="bannerPrincipal">
 		<div class="wrapper banner1">
 			<div class="circulo eslogan">
-				<h1>Saludable desde dentro hacia fuera.</h1>
+				<p>Saludable desde dentro hacia fuera.</p>
 			</div>
 			<div class="logomenu">
 				<div class="circulo"><img src="{% static 'img/logoinicio.png' %}" alt="Logo de La vida organic"></div>
@@ -55,7 +55,7 @@ La vida organica - Inicio
 	</section>
 	<section class="talleres">
 		<div class="wrapper">
-			<h2>Talleres</h2>
+			<h1>Talleres</h1>
 			<ul>
 				{% for taller in talleres %}					
 					{% if taller.tipo = 'taller' %}
@@ -116,7 +116,7 @@ La vida organica - Inicio
 	</section>
 	<section class="ultimasEntradas">
 		<div class="wrapper">
-			<h2>BLOG <span>Últimas Entradas</span></h2>
+			<h1>BLOG <span>Últimas Entradas</span></h1>
 				<ul class="listaNoticias">
 				{% for item in entradas %}
 					<li>

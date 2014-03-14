@@ -1,11 +1,9 @@
 @charset 'utf-8';
-h2{
-	margin: 0;
-	font-size: 7em;
-	color: #C8D075;
-}
-h2 span{
+
+h1 span{
 	font-size: 0.5em;
+	letter-spacing: -5px;
+	text-transform: lowercase;
 }
 h3{
 	text-align: center;
@@ -30,10 +28,12 @@ nav a{
 	display: inline-block;
 	width: 16%;
 	color: #FFF;
-	font-size: 1.5em;
+	font-size: 1.4em;
+	text-transform: uppercase;
 	text-shadow: 2px 1px 1px #000;
 	margin-right: 30px;
 	text-decoration: none;
+	
 }
 
 .circulo{
@@ -59,6 +59,13 @@ nav a{
 	position: relative;
 	right: -750px;
 	top: -234px;
+}
+.eslogan p{
+	margin: 0;
+	color: white;
+	font-family: 'Lobster', Helvetica, Arial;
+	line-height: 38px;
+	margin-top: 65px;
 }
 
 .bannerPrincipal{
@@ -264,13 +271,13 @@ nav a{
 }
 .ultimasEntradas  ul li img{
 	display: inline-block;
-	width: 270px;
+	width: 246px;
 	height: 253px;
 	background: #C8D075;
 }
 .ultimasEntradas  ul li .derecha{
 	display: inline-block;
-	width: 42%;
+	width: 46%;
 	vertical-align: top;
 	background-color: #C8D075;
 	height: 253px;
@@ -281,6 +288,8 @@ nav a{
 .tituloNoticia{
 	display: block;
 	text-align: center;
+	height: 75px;
+	overflow: hidden;
 	font-size: 1.4em;
 	padding-top: 16px; 
 }
@@ -298,6 +307,9 @@ nav a{
 	text-align: justify;
 	width: 90%;
 	margin: 0 auto;
+	height: 113px;
+	overflow: hidden;
+	margin-bottom: 5px;
 }
 
 @media screen and (max-width: 1000px){
