@@ -117,3 +117,62 @@ textarea{
 	width: 400px;
 }
 
+@media screen and (max-width: 1000px){
+	.headerPosition{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	nav{
+		position: static;
+		text-align: center;
+	}
+	nav a{
+		width: 19%;
+	}
+	.logomenu{
+		position: static;
+		text-align: center;
+	}
+	/* CONTACTO */
+	.fondoContacto{
+		height: auto;
+		text-align: center;
+	}
+	.mujer{
+		display: none;
+	}
+	.formCircle, .infoContacto, .contactSkype{
+		position: static;
+		margin: 0 auto;
+	}
+	.infoContacto{
+		padding: 0 49px;
+	}
+}
+@media screen and (max-width: 580px) {
+	h2{
+		font-size: 3.5em;
+	}
+	nav a{
+		width: 100%;
+	}
+	/*contacto*/
+	.formCircle{
+		background: #C8D075;
+		width: auto;
+		height: auto;
+		padding: 20px;
+	}
+	.campo label{
+		width: auto;
+	}
+	.infoContacto{
+		background: #C8D075;
+		width: auto;
+		height: auto;
+		padding: 0;
+	}
+	.infoContacto .wrapperInfo {
+		padding: 16px;
+	}
+}
