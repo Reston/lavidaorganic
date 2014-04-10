@@ -13,6 +13,8 @@ class Taller(models.Model):
 	precio = models.DecimalField(max_digits=19, decimal_places=2)
 	tipo = models.CharField(choices=TIPO_CHOICES, max_length=20, default='taller')
 	lugar = models.CharField(max_length=200, help_text='Hasta 200 caracteres, si es webinar dejar en blanco', blank=True)
+	capacidad = models.IntegerField()
+	inscritos = models.IntegerField(default=0)
 
 	def __unicode__(self):
 		return unicode(self.titulo)

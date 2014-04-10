@@ -45,6 +45,8 @@ def show_me_the_money(sender, **kwargs):
 			)
 		#Add a new order
 		PagoTaller.objects.create(user=customer, taller=taller_comprado)
+		#INCREMENTAR INSCRITOS
+		inscribir(taller_comprado)
 		#ENVIAR CORREO
 		mensaje = 'Gracias por realizar el pago por '+str(taller_comprado.titulo)+'\n Pago realizado por: '+str(ipn_obj.mc_gross)+'$\n Pautado para la siguiente fecha: '+str(taller_comprado.fecha)+'\n Un dia antes de la fecha pautada se le enviara las instrucciones para asistir al '+str(taller_comprado.tipo)+'\n'
 		if taller_comprado.tipo == 'Taller':
@@ -112,7 +114,13 @@ class HistoriaNutricional(models.Model):
 	informacion_alimentacion = models.TextField()
 	comida_casa = models.CharField(max_length=200)
 
-
+def inscribir(taller_comprado):
+	inscritos = Taller.objects.get(pk=taller_comprado).inscritos
+	suma_inscritos = inscritos + 1
+	print 'suma'
+	print suma_inscritos
+	Taller.objects.filter(pk=taller_comprado).update(inscritos=suma_inscritos)
+	
 
 
 

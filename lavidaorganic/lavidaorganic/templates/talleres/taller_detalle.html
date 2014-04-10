@@ -44,6 +44,7 @@ Talleres La vida orgánica.
 						{% else %}
 							<div class="tipo">Webinar</div>
 						{% endif %}
+							<div class="tipo">Precio {{ taller.precio }}$</div>
 						<div class="horataller">{{ taller.fecha|date:"P" }} a {{ taller.hora_hasta|date:"P" }}</div>
 						{% if taller.tipo = 'taller' %}
 							<div class="lugar">Lugar: {{taller.lugar}}</div>
