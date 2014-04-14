@@ -56,7 +56,7 @@ def services(request):
 	#Asesorio personalizada
 	paypal_dict_asesoria = {
 		"business": "lavidaorganic@lavidaorganic.com",
-		"amount": "199.99",
+		"amount": "249.99",
 		"item_name": "Asesoria Completa Personalizada",
 		"notify_url": "http://186.14.171.185:80/paypalito-manager/",
 		"return_url": "http://186.14.171.185:80/historia-de-salud/",

@@ -12,7 +12,7 @@ def show_me_the_money(sender, **kwargs):
 	print "CONFIRMED PAYMENT payment_was_successful"
 	print ipn_obj
 	print "========================================"
-	if ipn_obj.item_name == 'Asesoria Completa Personalizada' and ipn_obj.mc_gross == '199.99':
+	if ipn_obj.item_name == 'Asesoria Completa Personalizada' and ipn_obj.mc_gross == '249.99':
 		#ENVIAR CORREO
 		mensaje = u'Gracias por realizar el pago para la Asesoria Completa Personalizada\n Pago realizado por: 199.99 $\n Para continuar con los pasos para realizar la Asesoria'
 		+ 'debe ir a la siguiente dirección para llenar la historia de salud que sería el segundo paso por completar.\n Enlace para la historia: http://lavidaorganic.com/historia-de-salud/ '
@@ -47,6 +47,7 @@ def show_me_the_money(sender, **kwargs):
 		PagoTaller.objects.create(user=customer, taller=taller_comprado)
 		#INCREMENTAR INSCRITOS
 		inscribir(taller_comprado)
+		print "Inscrito persona"
 		#ENVIAR CORREO
 		mensaje = 'Gracias por realizar el pago por '+str(taller_comprado.titulo)+'\n Pago realizado por: '+str(ipn_obj.mc_gross)+'$\n Pautado para la siguiente fecha: '+str(taller_comprado.fecha)+'\n Un dia antes de la fecha pautada se le enviara las instrucciones para asistir al '+str(taller_comprado.tipo)+'\n'
 		if taller_comprado.tipo == 'Taller':
@@ -60,6 +61,11 @@ def payment_flagged(sender, **kwargs):
 	print "FLAGGED: %s" % sender.payer_email
 
 print "signals fueron importadas"
+
+def inscribir(taller_comprado):
+	taller_comprado.inscritos = taller_comprado.inscritos + 1
+	taller_comprado.save()
+	return
 
 
 class CorreoBoletin(models.Model):
@@ -113,14 +119,4 @@ class HistoriaNutricional(models.Model):
 	cocina = models.BooleanField(default=False)
 	informacion_alimentacion = models.TextField()
 	comida_casa = models.CharField(max_length=200)
-
-def inscribir(taller_comprado):
-	inscritos = Taller.objects.get(pk=taller_comprado).inscritos
-	suma_inscritos = inscritos + 1
-	print 'suma'
-	print suma_inscritos
-	Taller.objects.filter(pk=taller_comprado).update(inscritos=suma_inscritos)
-	
-
-
 
