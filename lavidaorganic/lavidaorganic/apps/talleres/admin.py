@@ -4,9 +4,10 @@ from lavidaorganic.apps.homepage.actions import export_as_csv_action
 
 class TallerAdmin(admin.ModelAdmin):
 	"""Admin de los talleres de la vida organica"""
-	list_display = ('titulo', 'descripcion_corta', 'fecha', 'hora_hasta', 'precio', 'tipo', 'lugar',)
+	list_display = ('titulo', 'descripcion_corta', 'inscritos', 'fecha', 'hora_hasta', 'precio', 'tipo', 'lugar',)
 	search_fields = ['titulo', 'precio']
 	list_filter = ['tipo', 'fecha']
+	readonly_fields = ('inscritos',)
 
 class UsuarioAdmin(admin.ModelAdmin):
 	"""Admin del modelo de usuarios de suscripcion"""

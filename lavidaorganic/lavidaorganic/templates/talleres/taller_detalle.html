@@ -51,9 +51,13 @@ Talleres La vida orgánica.
 						{% endif %}	
 					</div>
 				</div>
-				<div class="botonPaypal">
-					{{form_taller.sandbox}}
-				</div>
+				{% if cupo %}
+					<div class="botonPaypal">
+						{{form_taller.sandbox}}
+					</div>
+				{% else %}
+					<div class="botonPaypal">¡No hay cupos disponibles!</div>
+				{% endif %}
 	</div>
 </section>
 {% endblock %}
