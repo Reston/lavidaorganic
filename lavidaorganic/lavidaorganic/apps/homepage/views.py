@@ -45,22 +45,22 @@ def services(request):
 	# What you want the button to do.
 	#Una Consulta Personalizada
 	paypal_dict_consulta = {
-		"business": "lavidaorganic@lavidaorganic.com",
+		"business": "quecomicovzla@gmail.com",
 		"amount": "149.99",
 		"item_name": "Consulta Personalizada",
-		"notify_url": "http://186.14.171.185:80/paypalito-manager/",
-		"return_url": "http://186.14.171.185:80/historia-de-salud/",
-		"cancel_return": "http://186.14.171.185:80/",
+		"notify_url": "http://190.75.216.202:8080/paypalito-manager/",
+		"return_url": "http://190.75.216.202:8080/historia-de-salud/",
+		"cancel_return": "http://190.75.216.202:8080/",
 
 	}
 	#Asesorio personalizada
 	paypal_dict_asesoria = {
-		"business": "lavidaorganic@lavidaorganic.com",
-		"amount": "199.99",
+		"business": "quecomicovzla@gmail.com",
+		"amount": "249.99",
 		"item_name": "Asesoria Completa Personalizada",
-		"notify_url": "http://186.14.171.185:80/paypalito-manager/",
-		"return_url": "http://186.14.171.185:80/historia-de-salud/",
-		"cancel_return": "http://186.14.171.185:80/",
+		"notify_url": "http://190.75.216.202:8080/paypalito-manager/",
+		"return_url": "http://190.75.216.202:8080/historia-de-salud/",
+		"cancel_return": "http://190.75.216.202:8080/",
 	}
 
 	# Create the instance.

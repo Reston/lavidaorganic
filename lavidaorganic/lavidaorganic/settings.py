@@ -188,7 +188,7 @@ EMAIL_HOST_PASSWORD = 'ciem1234'
 EMAIL_POST = 587
 
 #Paypal settings
-PAYPAL_RECEIVER_EMAIL = "lavidaorganic@lavidaorganic.com"
+PAYPAL_RECEIVER_EMAIL = "quecomicovzla@gmail.com"
 
 
 # TODO - THESE MUST BE SET

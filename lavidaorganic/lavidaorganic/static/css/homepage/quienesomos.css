@@ -34,3 +34,45 @@ nav a{
 .logomenu img{
 	width: 200px;
 }
+.derecha, .izquierda{
+	display: inline-block;
+	width: 46.5%;
+	text-align: justify;
+	vertical-align: top;
+	padding: 14px;
+}
+.areas li{
+	color: #C8D075;
+}
+.areas li span{
+	font-size: 16px;
+	color: #000;
+}
+.derecha a{
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+	padding: 10PX;
+	background-color: #C8D075;
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+}
+.greenbox{
+	display: block;
+	color: #FFF;
+	padding: 10PX;
+	background-color: #C8D075;
+	width: 95%;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+.quienessomos{
+	background: url(../../img/patron.jpg);
+}
+@media screen and (max-width: 1200px){
+	.derecha, .izquierda{
+		width: 90%;
+	}
+}

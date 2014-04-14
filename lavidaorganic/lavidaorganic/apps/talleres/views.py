@@ -19,12 +19,12 @@ def taller(request, titulo):
 	taller = get_object_or_404(Taller, titulo=titulo)
 	#Asesorio personalizada
 	paypal_dict_taller = {
-		"business": "lavidaorganic@lavidaorganic.com",
+		"business": "quecomicovzla@gmail.com",
 		"amount": taller.precio,
 		"item_name": taller.titulo,
-		"notify_url": "http://186.188.118.110:80/paypalito-manager/",
-		"return_url": "http://186.188.118.110:80/historia-de-salud/",
-		"cancel_return": "http://186.188.118.110:80/",
+		"notify_url": "http://190.75.208.144:8080/paypalito-manager/",
+		"return_url": "http://190.75.208.144:8080/historia-de-salud/",
+		"cancel_return": "http://190.75.208.144:8080//",
 	}
 	# Create the instance.
 	form_taller = PayPalPaymentsForm(initial=paypal_dict_taller)
