@@ -9,14 +9,14 @@ from django.conf  import settings
 @receiver(payment_was_successful)
 def show_me_the_money(sender, **kwargs):
 	ipn_obj = sender
-	print "CONFIRMED PAYMENT payment_was_successful"
-	print ipn_obj
-	print "========================================"
+	#print "CONFIRMED PAYMENT payment_was_successful"
+	#print ipn_obj
+	#print "========================================"
 	if ipn_obj.item_name == 'Asesoria Completa Personalizada' and ipn_obj.mc_gross == '249.99':
 		#ENVIAR CORREO
 		mensaje = u'Gracias por realizar el pago para la Asesoria Completa Personalizada\n Pago realizado por: 199.99 $\n Para continuar con los pasos para realizar la Asesoria'
 		+ 'debe ir a la siguiente dirección para llenar la historia de salud que sería el segundo paso por completar.\n Enlace para la historia: http://lavidaorganic.com/historia-de-salud/ '
-		send_mail('Pago recibido por La Vida Organica - Asesoria Completa Personalizada', mensaje, settings.EMAIL_HOST_USER, [ipn_obj.payer_email], fail_silently=False)
+		send_mail('Pago recibido por La Vida Organica - Asesoria Completa Personalizada', mensaje, settings.DEFAULT_FROM_EMAIL, [ipn_obj.payer_email], fail_silently=False)
 		#print ipn_obj.payer_email
 		#print ipn_obj.first_name
 
@@ -24,7 +24,7 @@ def show_me_the_money(sender, **kwargs):
 		#ENVIAR CORREO
 		mensaje = u'Gracias por realizar el pago para la Consulta Personalizada\n Pago realizado por: 149.99 $\n Para continuar con los pasos para realizar la Consulta \
 		debe ir a la siguiente dirección para llenar la historia de salud que sería el segundo paso por completar.\n Enlace para la historia: http://lavidaorganic.com/historia-de-salud/ '
-		send_mail('Pago recibido por La Vida Organica - Consulta Personalizada', mensaje, settings.EMAIL_HOST_USER, [ipn_obj.payer_email], fail_silently=False)
+		send_mail('Pago recibido por La Vida Organica - Consulta Personalizada', mensaje, settings.DEFAULT_FROM_EMAIL, [ipn_obj.payer_email], fail_silently=False)
 	else:
 		#Chequear si taller pagado existe
 		try:
@@ -47,12 +47,12 @@ def show_me_the_money(sender, **kwargs):
 		PagoTaller.objects.create(user=customer, taller=taller_comprado)
 		#INCREMENTAR INSCRITOS
 		inscribir(taller_comprado)
-		print "Inscrito persona"
+		#print "Inscrito persona"
 		#ENVIAR CORREO
 		mensaje = 'Gracias por realizar el pago por '+str(taller_comprado.titulo)+'\n Pago realizado por: '+str(ipn_obj.mc_gross)+'$\n Pautado para la siguiente fecha: '+str(taller_comprado.fecha)+'\n Un dia antes de la fecha pautada se le enviara las instrucciones para asistir al '+str(taller_comprado.tipo)+'\n'
 		if taller_comprado.tipo == 'Taller':
 			mensaje = mensaje + 'Lugar: '+str(taller_comprado.lugar)+'\n Hora: '+str(taller_comprado.hora_hasta)
-		send_mail('Pago recibido por La Vida Organica - '+taller_comprado.titulo, mensaje, settings.EMAIL_HOST_USER, [ipn_obj.payer_email], fail_silently=False)
+		send_mail('Pago recibido por La Vida Organica - '+taller_comprado.titulo, mensaje, settings.DEFAULT_FROM_EMAIL, [ipn_obj.payer_email], fail_silently=False)
 		pass
 	return
 
