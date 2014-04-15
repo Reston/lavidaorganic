@@ -178,7 +178,12 @@ background: url('../img/entradas.png');
 p.entry-info{display: inline-block;margin-right: 12px;
 vertical-align: top;color:#666;background:transparent url('../img/category.png?1317027277') no-repeat scroll 0.5em}
 .zinnia .entry-body{text-align:justify;padding-right:0.5em;font-size:1.2em;}
-.zinnia .entry-body img,.zinnia .entry-body img{padding: 0.5em;border: 1px solid #eee;max-width: 60%;margin-left: -12px;}.left{margin:0 1.5em 1.5em 0;float:left;;}
+.zinnia .entry-body img,.zinnia .entry-body img{padding: 0.5em;
+border: 1px solid #EEE;
+max-width: 60%;
+margin-left: -12px;
+max-height: 350px;
+margin-top: 0px;}.left{margin:0 1.5em 1.5em 0;float:left;;}
 .zinnia .entry-body img.right{margin:0 0 1.5em 1.5em;float:right}.zinnia .entry-body li{list-style-image:none}.zinnia .entry-body pre,.zinnia .entry-body blockquote{width:auto;overflow:auto;padding:1em;clear:none;float:none;background-color:#e9e9f3}.zinnia .entry-body blockquote{border:1px dashed #a7a7cf}.zinnia .entry-body blockquote p{margin:0}.zinnia .entry-body pre{line-height:110%;border-top:1px solid #a7a7cf;border-bottom:1px solid #a7a7cf}
 .zinnia .continue-reading{}
 .zinnia .continue-reading a:after{content:"\21d2"}.zinnia .entry-footer p{margin:0}.zinnia .entry-tags strong{padding-left:1.5em;background:transparent url('../img/tags.png?1317027277') no-repeat scroll}.zinnia .entry-shorturl strong{padding-left:1.5em;background:transparent url('../img/shorturl.png?1317027277') no-repeat scroll}.zinnia .entry-comments strong{padding-left:1.5em;background:transparent url('../img/comments.png?1317027277') no-repeat scroll}.zinnia .entry-widgets p,.zinnia .entry-widgets ul{padding-left:1.5em}.zinnia .entry-widgets,.zinnia #comments,.zinnia #pingbacks,.zinnia #trackbacks{padding-left: 27px;padding-top:1em;border-top:1px solid #eee}.zinnia #comments li,.zinnia #pingbacks li,.zinnia #trackbacks li{list-style:none;padding:1em 1em 0 1em;margin-bottom:1em;border:1px solid #eee}.zinnia #comments li{min-height:90px}.zinnia #comments img{float:left;margin-right:1em;padding:0.5em;border:1px solid #eee}.zinnia 
@@ -207,6 +212,7 @@ border-bottom: solid 2px #C8D075;}
 }
 .entry-content{
 	font-size: 16px;
+	height: 400px;
 }
 .author{
 	text-transform: capitalize;
