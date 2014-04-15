@@ -22,8 +22,9 @@ def index(request):
 			newsletter = False
 	else:
 		form = boletinForm()
-	entradas= Entry.objects.order_by('-creation_date')
-	entradas= entradas[:3]
+	entradas = Entry.objects.filter(status=2).order_by('-creation_date')
+	entradas = entradas.exclude(start_publication__gte=datetime.date.today())
+	entradas= entradas[:4]
 	talleres =  Taller.objects.filter(fecha__gte=datetime.date.today()).order_by('fecha')
 	numero_talleres = talleres.count()
 	talleres= talleres[:3]
