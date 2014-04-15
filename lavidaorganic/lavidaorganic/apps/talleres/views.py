@@ -26,9 +26,9 @@ def taller(request, titulo):
 		"business": "lavidaorganic@lavidaorganic.com",
 		"amount": taller.precio,
 		"item_name": taller.titulo,
-		"notify_url": "http://186.14.171.185:80/paypalito-manager/",
-		"return_url": "http://186.14.171.185:80/historia-de-salud/",
-		"cancel_return": "http://186.14.171.185:80/",
+		"notify_url": "http://lavidaorganic.com/paypalito-manager/",
+		"return_url": "http://lavidaorganic.com/historia-de-salud/",
+		"cancel_return": "http://lavidaorganic.com/",
 	}
 	# Create the instance.
 	form_taller = PayPalPaymentsForm(initial=paypal_dict_taller)

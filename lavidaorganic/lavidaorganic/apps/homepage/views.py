@@ -49,9 +49,9 @@ def services(request):
 		"business": "quecomicovzla@gmail.com",
 		"amount": "149.99",
 		"item_name": "Consulta Personalizada",
-		"notify_url": "http://190.75.216.202:8080/paypalito-manager/",
-		"return_url": "http://190.75.216.202:8080/historia-de-salud/",
-		"cancel_return": "http://190.75.216.202:8080/",
+		"notify_url": "http://lavidaorganic.com/paypalito-manager/",
+		"return_url": "http://lavidaorganic.com/historia-de-salud/",
+		"cancel_return": "http://lavidaorganic.com/",
 
 	}
 	#Asesorio personalizada
@@ -59,9 +59,9 @@ def services(request):
 		"business": "lavidaorganic@lavidaorganic.com",
 		"amount": "249.99",
 		"item_name": "Asesoria Completa Personalizada",
-		"notify_url": "http://190.75.216.202:8080/paypalito-manager/",
-		"return_url": "http://190.75.216.202:8080/historia-de-salud/",
-		"cancel_return": "http://190.75.216.202:8080/",
+		"notify_url": "http://lavidaorganic.com/paypalito-manager/",
+		"return_url": "http://lavidaorganic.com/historia-de-salud/",
+		"cancel_return": "http://lavidaorganic.com/",
 	}
 
 	# Create the instance.
