@@ -41,6 +41,9 @@ nav a{
     -webkit-border-radius: 50%; 
     border-radius: 50%;
 	display: inline-block;
+}
+.transparente{
+	background: #C8D075;
 	background: rgba(200, 208, 117, 0.7);
 }
 .logomenu{

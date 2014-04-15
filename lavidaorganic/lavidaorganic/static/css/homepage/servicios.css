@@ -103,10 +103,18 @@ nav a{
 }
 .textWrap{
 	position: relative;
-	top: 75px;
 	width: 390px;
 	margin-left: auto;
 	margin-right: auto;
+}
+.text_po1{
+	top: 80px;
+}
+.text_po2{
+	top: 45px;
+}
+.text_po3{
+	top: 100px;
 }
 .circuloVerde .bold{
 	font-weight: bold;

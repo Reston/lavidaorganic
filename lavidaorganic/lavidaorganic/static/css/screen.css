@@ -157,7 +157,7 @@ font-family: 'Coda Caption', sans-serif;}
 .zinnia #widget-tags ul.tags .tag-5{font-size:1.3em;color:#002944}
 .zinnia #widget-tags ul.tags .tag-6{font-size:1.5em;color:#000}
 .zinnia #widget-populars a{display:block}.zinnia #widget-search input[type=text]{width:70%}.zinnia table.calendar{table-layout:fixed}.zinnia table.calendar caption,.zinnia table.calendar td,.zinnia table.calendar th{padding:4px 0;text-align:center}.zinnia table.calendar caption{background:none;font-weight:bold;color:#39d;text-transform:uppercase}.zinnia table.calendar th,.zinnia table.calendar tfoot td{background:none repeat scroll 0 0 #e9e9f3;border-bottom:1px solid #c8c8e1;border-top:1px solid #c8c8e1}.zinnia table.calendar tfoot td{font-style:normal;text-transform:capitalize}.zinnia table.calendar .entry{font-weight:bold}
-.zinnia .hentry{padding: 27px;}
+.zinnia .hentry{padding: 27px; background: white;}
 #content{margin-top: 17px;}
 .zinnia ul li{
 	list-style: none;
