@@ -73,9 +73,7 @@ nav a{
 	text-align: justify;
 }
 .introduccion p{
-	background: #FFF;
 	padding: 12px;
-	color: #C8D075;
 }
 .verServicios{
 	display: block;
@@ -185,6 +183,9 @@ nav a{
 	border-radius: 50%;
 	z-index: -1;
 }
+.areascoaching{
+	margin-bottom: 30px;
+}
 /* SERVICIOS DISPONIBLES */
 .servicios{
 	margin-top: 52px;
@@ -239,6 +240,7 @@ nav a{
 .instrucciones{
 	color: white;
 	font-weight: bold;
+	margin-bottom: 47px;
 }
 .instrucciones > div{
 	font-size: 2em;

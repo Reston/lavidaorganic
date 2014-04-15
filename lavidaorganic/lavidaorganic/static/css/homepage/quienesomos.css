@@ -76,3 +76,28 @@ nav a{
 		width: 90%;
 	}
 }
+@media screen and (max-width: 1000px){
+	.headerPosition{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	nav{
+		position: static;
+		text-align: center;
+	}
+	nav a{
+		width: 19%;
+	}
+	.logomenu{
+		position: static;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 580px) {
+	h2{
+		font-size: 3.5em;
+	}
+	nav a{
+		width: 100%;
+	}
+	}

@@ -43,6 +43,9 @@ nav a{
 .hidden{
 	visibility: hidden;
 }
+.tituloseccion h2{
+	display: inline-block;
+}
 textarea{
 	border-top: solid 1px #8E8E8E;
 	border-right: solid 1px #D1D1D1;
@@ -58,14 +61,13 @@ textarea{
 	display: inline-block;
 	height: 5px;
 	background-color: #C8D075;
-	vertical-align: middle;
 	margin-top: -19px;
 }
 .seccionline1{
 		width: 60px;
 	}
 .seccionline2{
-	width: 445px;
+	width: 661px;
 }
 
 /* Datos personales */
@@ -131,7 +133,7 @@ textarea{
 	height: 100px;
 }
 .saludline{
-	width: 376px;
+	width: 633px;
 }
 .nodisplay{
 	display: none;
@@ -195,10 +197,10 @@ width: 56.1%;
 	width: 668px;
 }
 .medicoline{
-	width: 503px;
+	width: 695px;
 }
 .alimentosline{
-	width: 286px;
+	width: 582px;
 }
 .errorlist{
 	list-style: none;
@@ -240,3 +242,38 @@ width: 56.1%;
 	border-radius: 5px;
 	padding: 16px;
 }
+@media screen and (max-width: 1000px){
+	.headerPosition{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	nav{
+		position: static;
+		text-align: center;
+	}
+	nav a{
+		width: 19%;
+	}
+		.logomenu{
+		position: static;
+		text-align: center;
+	}
+	.seccionline1, .seccionline2{
+		display: none;
+	}
+	#formulario div{
+		width: 90%;
+	}
+	.derecha1 {
+		padding-left: 0px;
+}
+}
+@media screen and (max-width: 575px) {
+	h1{
+		font-size: 3.5em;
+	}
+	nav a{
+		width: 100%;
+	}
+	}
+

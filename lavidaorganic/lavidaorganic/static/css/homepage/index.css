@@ -41,6 +41,7 @@ nav a{
     -webkit-border-radius: 50%; 
     border-radius: 50%;
 	display: inline-block;
+	background: rgba(200, 208, 117, 0.7);
 }
 .logomenu{
 	display: inline-block;
@@ -62,10 +63,11 @@ nav a{
 }
 .eslogan p{
 	margin: 0;
-	color: white;
-	font-family: 'Lobster', Helvetica, Arial;
+	font-family: 'IM Fell Double Pica', serif;
 	line-height: 38px;
+	font-style: italic;
 	margin-top: 65px;
+	font-size: 25px;
 }
 
 .bannerPrincipal{
