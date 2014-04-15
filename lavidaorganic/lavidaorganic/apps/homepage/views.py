@@ -49,7 +49,7 @@ def services(request):
 		"business": "quecomicovzla@gmail.com",
 		"amount": "149.99",
 		"item_name": "Consulta Personalizada",
-		"notify_url": "http://lavidaorganic.com/paypalito-manager/",
+		#"notify_url": "http://lavidaorganic.com/paypalito-manager/",
 		"return_url": "http://lavidaorganic.com/historia-de-salud/",
 		"cancel_return": "http://lavidaorganic.com/",
 
@@ -59,7 +59,7 @@ def services(request):
 		"business": "lavidaorganic@lavidaorganic.com",
 		"amount": "249.99",
 		"item_name": "Asesoria Completa Personalizada",
-		"notify_url": "http://lavidaorganic.com/paypalito-manager/",
+		#"notify_url": "http://lavidaorganic.com/paypalito-manager/",
 		"return_url": "http://lavidaorganic.com/historia-de-salud/",
 		"cancel_return": "http://lavidaorganic.com/",
 	}
