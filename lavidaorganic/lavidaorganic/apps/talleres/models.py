@@ -15,6 +15,8 @@ class Taller(models.Model):
 	lugar = models.CharField(max_length=200, help_text='Hasta 200 caracteres, si es webinar dejar en blanco', blank=True)
 	capacidad = models.IntegerField()
 	inscritos = models.IntegerField(default=0)
+	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
+	modificado_en = models.DateTimeField(auto_now=True)
 
 	def __unicode__(self):
 		return unicode(self.titulo)
